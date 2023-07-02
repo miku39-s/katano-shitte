@@ -1,0 +1,89 @@
+body{
+    font-family: 'Zen Maru Gothic', sans-serif;
+    font-size: 18px;
+}
+
+/* 横幅設定 */
+body{
+    max-width: 1440px;
+    min-width: 960px;
+    margin: 0 72px 0 72px;
+    background-color: #F2FEFF;
+}
+
+/* タイトル（右寄せ） */
+.index{
+    position: relative;
+}
+
+.img-reverse{
+    transform: scale(-1, 1);
+    position: absolute;
+    right: 0;
+}
+
+.title-reverse{
+    position: absolute;
+    left: 180px;
+    top: -40px;
+    width: 500px;
+}
+
+.title-reverse > h2{
+    font-size: 60px;
+    color: #187FC4;
+    position: absolute;
+}
+.title-reverse > h2::first-letter{
+    font-size: 80px;
+}
+
+.intro{
+    padding-top: 350px;
+}
+
+.section{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 160px auto 0 auto;
+}
+
+.section > div{
+    margin-right: 60px;
+}
+
+.section > div > p{
+    line-height: 2;
+}
+
+.section > div > img{
+    border-radius: 20px;
+}
+
+.waypoint{
+    margin-top: 160px;
+}
+
+.side-by-side{
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+.side-by-side > div > img{
+    width: 400px;
+    height: 500px;
+    object-fit: cover;
+}
+
+.position-map{
+    margin: 160px auto 80px auto;
+    text-align: center;
+
+}
+
+.position-map > img{
+    border-radius: 20px;
+}
+
