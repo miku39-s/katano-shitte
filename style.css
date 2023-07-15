@@ -147,7 +147,6 @@ animation-delay: .3s;
 /* タイトル（右寄せ） */
 
 .img-reverse{
-    transform: scale(-1, 1);
     position: absolute;
     right: 0;
     bottom: 0;
@@ -167,6 +166,67 @@ animation-delay: .3s;
     font-size: 80px;
 }
 
+/*========= 流れるテキスト ===============*/
+
+/*全共通*/
+
+.slide-in {
+	overflow: hidden;
+    display: inline-block;
+}
+
+.slide-in_inner {
+	display: inline-block;
+
+}
+
+/*左右のアニメーション*/
+.leftAnime{
+    opacity: 0;/*事前に透過0にして消しておく*/
+}
+
+.rightAnime{
+    opacity: 0;/*事前に透過0にして消しておく*/
+}
+
+.slideAnimeLeftRight {
+	animation-name:slideTextX100;
+	animation-duration:0.9s;
+	animation-fill-mode:forwards;
+    opacity: 0;
+}
+
+@keyframes slideTextX100 {
+  from {
+	transform: translateX(-100%); /*要素を左の枠外に移動*/
+        opacity: 0;
+  }
+
+  to {
+	transform: translateX(0);/*要素を元の位置に移動*/
+    opacity: 1;
+  }
+}
+
+.slideAnimeRightLeft {
+	animation-name:slideTextX-100;
+	animation-duration:0.9s;
+	animation-fill-mode:forwards;
+    opacity: 0;
+}
+
+
+@keyframes slideTextX-100 {
+  from {
+	transform: translateX(100%);/*要素を右の枠外に移動*/
+    opacity: 0;
+  }
+
+  to {
+	transform: translateX(0);/*要素を元の位置に移動*/
+    opacity: 1;
+  }
+}
 
 /* 交野市って？ */
 #about{
@@ -693,11 +753,81 @@ animation-delay: .3s;
     transform: scale(1, 1); /*ホバー後、x軸方向に1（相対値）伸長*/
 }
 
+#access-link:visited{
+    color: #003DB9;
+    text-decoration: none;
+}
+
 /* フッター */
 footer{
     margin: 100px auto 30px auto;
 }
 
+/* TOPへ戻るボタン */
+#page-top a{
+	display: flex;
+	justify-content:center;
+	align-items:center;
+	background:#187FC4;
+	border-radius: 50%;
+	width: 60px;
+	height: 60px;
+	color: #fff;
+    font-size: 0.8rem;
+	text-align: center;
+	text-transform: uppercase; 
+	text-decoration: none;
+	transition:all 0.3s;
+}
+
+#page-top a:hover{
+	background: #FFFD84;
+    color: #187FC4;
+}
+
+/*リンクを右下に固定*/
+#page-top {
+	position: fixed;
+	right: 20px;
+	z-index: 100;
+    /*はじめは非表示*/
+	opacity: 0;
+	transform: translateY(100px);
+}
+
+/*　上に上がる動き　*/
+
+#page-top.UpMove{
+	animation: UpAnime 0.5s forwards;
+}
+@keyframes UpAnime{
+  from {
+    opacity: 0;
+	transform: translateY(100px);
+  }
+  to {
+    opacity: 1;
+	transform: translateY(0);
+  }
+}
+
+/*　下に下がる動き　*/
+
+#page-top.DownMove{
+	animation: DownAnime 0.5s forwards;
+}
+@keyframes DownAnime{
+  from {
+  	opacity: 1;
+	transform: translateY(0);
+  }
+  to {
+  	opacity: 1;
+	transform: translateY(100px);
+  }
+}
+
+/* ロゴ */
 #footer-logo{
     margin: 0 auto;
     width: fit-content;
@@ -712,3 +842,4 @@ footer{
     text-align: center;
     font-size: 20px;
 }
+
