@@ -520,6 +520,31 @@ to {
         z-index: 15;
     }
 
+    /* 準備中かぶせ */
+    .preparation{
+        display: flex;
+        z-index: 16;
+        background-color: #111111;
+        color: #ffffff;
+        width: 170px;
+        height: 65px;
+        opacity: 0.7;
+       justify-content: center;
+       align-items: center;   
+    }
+    
+    #preparation-right{
+        position: absolute;
+        top: 550px;
+        right: 15%;
+    }
+
+    #preparation-left{
+        position: absolute;
+        top: 550px;
+        left: 400px;
+    }
+
     /* 歴史を知って！ */
     #history{
         width: 100%;
@@ -1263,6 +1288,32 @@ to {
         left: 400px;
         z-index: 15;
     }
+
+    /* 準備中かぶせ */
+    .preparation{
+        display: flex;
+        z-index: 16;
+        background-color: #111111;
+        color: #ffffff;
+        width: 170px;
+        height: 65px;
+        opacity: 0.7;
+        justify-content: center;
+        align-items: center;   
+    }
+    
+    #preparation-right{
+        position: absolute;
+        top: 915px;
+        left: 325px;
+    }
+
+    #preparation-left{
+        position: absolute;
+        top: 915px;
+        left: 325px;
+    }
+
 
     /* 歴史を知って！ */
     #history{
@@ -2103,6 +2154,32 @@ to {
     #more-left{
         top: 665px;
     }
+
+    /* 準備中かぶせ */
+    .preparation{
+        display: flex;
+        z-index: 16;
+        background-color: #111111;
+        color: #ffffff;
+        width: 135px;
+        height: 60px;
+        opacity: 0.7;
+       justify-content: center;
+       align-items: center;   
+    }
+    
+    #preparation-right{
+        position: absolute;
+        top: 650px;
+        right: 0px;
+    }
+
+    #preparation-left{
+        position: absolute;
+        top: 665px;
+        right: 0px;
+    }
+    
 
     /* 歴史を知って！ */
     #history{
