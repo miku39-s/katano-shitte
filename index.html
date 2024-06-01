@@ -13,37 +13,61 @@
 </head>
 <body>
     <header>
+        <!-- PC・タブレット用メニュー -->
         <div id="header">
             <a href="index.html"><img id="logo" src="img/logo.png" alt="サイトロゴ"></a>
             <nav id="menu">
-                    <a href="index.html#about">
-                        <div class="wave">
-                            <span>交</span><span>野</span><span>市</span><span>っ</span><span>て</span><span>？</span>
-                        </div>
-                    </a>
-                    <a href="index.html#superbview">
-                        <div class="wave">
-                            <span>絶</span><span>景</span><span>を</span><span>知</span><span>っ</span><span>て</span><span>！</span>
-                        </div>
-                    </a>
-                    <a href="index.html#history">
-                        <div class="wave">
-                            <span>歴</span><span>史</span><span>を</span><span>知</span><span>っ</span><span>て</span><span>！</span>
-                        </div>
-                    </a>
-                    <a href="index.html#dreamy">
-                        <div class="wave">
-                            <span>ロ</span><span>マ</span><span>ン</span><span>を</span><span>知</span><span>っ</span><span>て</span><span>！</span>
-                        </div>
-                    </a>
-                    <a href="access.html">
-                        <div class="wave">
-                            <span>行</span><span>き</span><span>方</span>
-                        </div>
-                    </a>
-                
+                <a href="index.html#about">
+                    <div class="wave">
+                        <span>交</span><span>野</span><span>市</span><span>っ</span><span>て</span><span>？</span>
+                    </div>
+                </a>
+                <a href="index.html#superbview">
+                    <div class="wave">
+                        <span>絶</span><span>景</span><span>を</span><span>知</span><span>っ</span><span>て</span><span>！</span>
+                    </div>
+                </a>
+                <a href="index.html#history">
+                    <div class="wave">
+                        <span>歴</span><span>史</span><span>を</span><span>知</span><span>っ</span><span>て</span><span>！</span>
+                    </div>
+                </a>
+                <a href="index.html#dreamy">
+                    <div class="wave">
+                        <span>ロ</span><span>マ</span><span>ン</span><span>を</span><span>知</span><span>っ</span><span>て</span><span>！</span>
+                    </div>
+                </a>
+                <a href="access.html">
+                    <div class="wave">
+                        <span>行</span><span>き</span><span>方</span>
+                    </div>
+                </a>
+            
             </nav>
+            <!-- スマホ用メニュー -->
+                <!-- ボタン -->
+                <div class="openbtn">
+                    <div class="openbtn-area">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </div>
+                <nav id="nav-sp">
+                <!-- メニュー -->
+                    <ul>
+                        <li><a class="menu" href="index.html#about">交野市って？</a></li>
+                        <li><a href="index.html#superbview">絶景を知って！</a></li>
+                        <li><a href="index.html#history">歴史を知って！</a></li>
+                        <li><a href="index.html#dreamy">ロマンを知って！</a></li>
+                        <li><a href="access.html">行き方</a></li>
+                    </ul>
+                </nav>
+           
         </div>
+
+
+        
         <!-- メインビジュアル -->
         <div id="mainvisual">
             <img class="mainimg" src="img/main-visual1.jpg" alt="交野山の遠景">
@@ -113,7 +137,7 @@
                         <br>   
                         <p>
                             <span class="slide-in leftAnime">
-                                <span class="slide-in_inner leftAnimeInner"><font size="5">さあ、是非そのまま下にスクロールしてみてください！</font></span>
+                                <span class="slide-in_inner leftAnimeInner"><font size="5em">さあ、是非そのまま下にスクロールしてみてください！</font></span>
                             </span>
                         </p>
                         <div class="star img-large yellow"></div>
@@ -129,11 +153,13 @@
             <!-- 絶景を知って！ -->
             <section id="superbview">
                 <!-- 見出し -->
-                <div class="diagonal"></div>
+                <div id="superbview-diagonal"></div>
                 <div class="index">
-                    <span class="slide-in rightAnime">
-                        <span class="slide-in_inner rightAnimeInner"><img class="img-reverse" src="img/underline-r.png" alt="タイトル下線"></span>
-                    </span>
+                    <!-- <span class="slide-in rightAnime">
+                        <span class="slide-in_inner rightAnimeInner"> -->
+                            <img class="img-reverse" src="img/underline-r.png" alt="タイトル下線">
+                        <!-- </span>
+                    </span> -->
                     <div class="title-reverse">
                         <h2>
                             <span class="slide-in rightAnime">
@@ -170,7 +196,7 @@
                 <div class="star img-small blue"></div>
 
                 <!-- 交野山 -->
-                <div class="mountain">
+                <div class="mountain fadeUpTrigger">
                     <div id="viewimage-left">
                         <img class="viewimage" src="img/kounosan.jpg" alt="交野山の観音岩からの景色">
                     </div>
@@ -183,12 +209,14 @@
                         <p> 晴れた日には京都・大阪・神戸・奈良方面まで見渡すことができ、<br>条件が良ければあべのハルカスが見えることもあります。</p>
                     </div>
                     <div class="more">
-                        <a href="superbview.html#kounosan" class="btn">もっと見る</a>
+                        <!-- <a href="superbview.html#kounosan" class="btn"> -->
+                            もっと見る
+                        <!-- </a> -->
                     </div>
                 </div>
 
                 <!-- 星のブランコ -->
-                <div class="bridge">
+                <div class="bridge fadeUpTrigger">
                     <div id="viewimage-right">
                         <img class="viewimage" src="img/hoshinoburanko.jpg" alt="星のブランコ（吊り橋）の写真">
                     </div>
@@ -204,6 +232,7 @@
                         <a href="superbview.html#kounosan" class="btn">もっと見る</a>
                     </div>
                 </div>
+
             </section>
 
             <!-- 歴史を知って！ -->
@@ -224,16 +253,32 @@
                 </div>
                     <!-- 導入文 -->
                     <div class="introductory-right">
-                        <p>「歴史ってなんだか苦手」</p>
-                        <p>「堅苦しい話は好きじゃない</p>
-                        <p>いえいえ、私が知ってほしいのはもっと気軽な歴史のマメ知識。</p>
-                        <p>ちょっと意外な交野市の一面を、あなたも覗いてみませんか？</p>
+                        <p>
+                            <span class="slide-in leftAnime">
+                                <span class="slide-in_inner leftAnimeInner">「歴史ってなんだか苦手」？</span>
+                            </span>
+                        </p>
+                        <p>
+                            <span class="slide-in leftAnime">
+                                <span class="slide-in_inner leftAnimeInner">「堅苦しい話は好きじゃない」？</span>
+                            </span>
+                        </p>
+                        <p>                            
+                            <span class="slide-in leftAnime">
+                                <span class="slide-in_inner leftAnimeInner">いえいえ、私が知ってほしいのはもっと気軽な歴史のマメ知識。</span>
+                            </span>
+                        </p>
+                        <p>
+                            <span class="slide-in leftAnime">
+                                <span class="slide-in_inner leftAnimeInner">ちょっと意外な交野市の一面を、あなたも覗いてみませんか？</span>
+                            </span>
+                        </p>
                     </div>
                     <div class="star img-medium blue"></div>
                     <div class="star img-small purple"></div>
                     
                     <!--　歴史コンテンツ -->
-                    <div id="indexes">
+                    <div id="indexes" class="fadeUpTrigger">
                         <ul class="accordion-area">
                             <!-- 平安時代の～ -->
                             <li>
@@ -330,11 +375,16 @@
             <!-- ロマンを知って！ -->
             <section id="dreamy">
                 <!-- 見出し -->
-                <div class="diagonal"></div>
+                <div id="dreamy-diagonal"></div>
                 <div class="index from-right">
                     <img class="img-reverse" src="img/underline-r.png" alt="タイトル下線">
                     <div class="title-reverse">
-                        <h2>ロマンを知って！</h2>
+                        <h2>
+                            <span class="slide-in rightAnime">
+                                <span class="slide-in_inner rightAnimeInner">ロマンを知って！</span>
+                            </span>
+
+                         </h2>
                     </div>
                 </div>
 
@@ -364,22 +414,41 @@
                 <div class="star img-small peacock"></div>
                 <div class="star img-medium yellow"></div>
 
-                <!-- クリッカブルマップ -->
+                <!-- クリッカブルマップ (PC・タブレット用)-->
                 <div id="legend-map">
-                    <p>↓気になる★をクリック！</p>
+                    <p class="fadeUpTrigger">↓気になる★をクリック！</p>
                     <!-- Image Map Generated by http://www.image-map.net/ -->
-                    <img src="img/Katano-map.jpg" usemap="#image-map">
-
-                    <map name="image-map">
-                        <area target="_blank" alt="" href="starfall.html" coords="393,626,400,610,409,624,426,630,416,640,413,660,402,655,389,662,387,644,378,631" shape="poly" class="iframe-open">
-                        <area target="_blank" alt="" href="starfall.html" coords="449,519,454,508,461,521,475,528,466,540,467,556,456,549,439,558,441,541,433,526" shape="poly" class="iframe-open">
-                        <area target="_blank" alt="" href="starfall.html" coords="513,625,521,609,529,622,544,631,536,644,536,660,520,654,507,665,512,644,498,630" shape="poly" class="iframe-open">
-                        <area target="_blank" alt="" href="starfall.html" coords="735,500,743,484,751,498,764,506,757,516,756,534,743,528,731,538,731,516,722,502" shape="poly" class="iframe-open">
-                        <area target="_blank" alt="" href="tanabata.html" coords="726,111,717,127,706,134,713,146,713,165,726,160,740,164,740,149,749,131,735,129" shape="poly" class="iframe-open">
-                        <area target="_blank" alt="" href="tanabata.html" coords="652,405,643,416,629,422,638,437,636,455,652,450,665,455,665,437,674,423,660,422" shape="poly" class="iframe-open">
-                        <area target="_blank" alt="" href="tanabata.html" coords="561,627,552,640,541,645,548,659,548,676,563,668,573,679,574,661,584,645,568,641" shape="poly" class="iframe-open">
-                        <area target="_blank" alt="" href="descendant.html" coords="710,785,704,799,688,804,699,818,696,836,711,831,725,838,724,821,733,802,721,802" shape="poly" class="iframe-open">
+                    <img class="fadeUpTrigger" src="img/Katano-map.jpg" usemap="#ImageMap" alt="" />
+                    <map name="ImageMap">
+                    <area shape="poly" coords="728,112,737,131,751,135,741,152,742,167,726,161,713,167,713,150,706,135,720,131,720,130" href="tanabata.html" alt="" class="iframe-open"/>
+                    <area shape="poly" coords="655,406,664,419,676,427,669,440,671,459,656,451,642,458,640,439,632,425,645,419,655,408,655,408" href="tanabata.html" alt="" class="iframe-open"/>
+                    <area shape="poly" coords="561,625,572,638,585,645,574,659,576,677,563,669,548,676,548,658,539,643,554,640,554,640" href="tanabata.html" alt="" class="iframe-open"/>
+                    <area shape="poly" coords="754,499,768,503,754,522,759,540,743,531,729,537,732,522,724,505,734,503,743,486,762,511" href="starfall.html" alt="" class="iframe-open"/>
+                    <area shape="poly" coords="523,611,530,623,545,629,535,642,535,662,523,652,509,661,510,645,499,630,513,623,513,623" href="starfall.html" alt="" class="iframe-open"/>
+                    <area shape="poly" coords="453,505,463,522,474,524,464,540,468,556,454,551,442,556,441,541,431,525,448,519,448,519" href="starfall.html" alt="" class="iframe-open"/>
+                    <area shape="poly" coords="401,609,409,625,423,630,413,645,415,663,402,658,388,662,387,645,378,630,393,625,393,625" href="starfall.html" alt="" class="iframe-open"/>
+                    <area shape="poly" coords="713,783,722,799,736,804,724,819,729,839,712,829,699,837,698,818,690,804,703,798,703,798" href="descendant.html" alt="" class="iframe-open"/>
                     </map>
+
+                    
+                </div>
+                <!-- スマホ用表記 -->
+                <div id="legend-letter">
+                    <p>
+                        <img class="leftstar" src="img/starline.png" alt="星のライン">
+                        <a href="tanabata.html" class="iframe-open legend-link">交野市と七夕伝説</a>
+                        <img class="rightstar" src="img/starline-r.png" alt="星のライン">
+                    </p>
+                    <p>
+                        <img class="leftstar" src="img/starline.png" alt="星のライン">
+                        <a href="starfall.html" class="iframe-open legend-link">交野市と降星伝説</a>
+                        <img class="rightstar" src="img/starline-r.png" alt="星のライン">
+                    </p>
+                    <p>
+                        <img class="leftstar" src="img/starline.png" alt="星のライン">
+                        <a href="descendant.html" class="iframe-open legend-link">交野市と天孫降臨</a>
+                        <img class="rightstar" src="img/starline-r.png" alt="星のライン">
+                    </p>
                 </div>
             </section>
 
@@ -401,12 +470,14 @@
             <img src="img/logo.png" alt="サイトロゴ">
         </div>
         <div>
-            <p id="copyright">&copy2023 Katano-Shitte! All rights reserved.</p>
+            <p id="copyright">&copy2023-2024 Katano-Shitte! All rights reserved.</p>
         </div>
     </footer>
 
     <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Modaal/0.4.4/js/modaal.min.js"></script>
+    <script src="https://unpkg.com/image-map-resizer@1.0.10/js/imageMapResizer.min.js"></script>
+    <script>imageMapResize();</script>
     <script src="main.js"></script>
 </body>
 </html>

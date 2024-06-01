@@ -1,845 +1,2429 @@
+/* 共通設定 */
 body{
     font-family: 'Zen Maru Gothic', sans-serif;
-    font-size: 18px;
-}
-
-/* 横幅設定 */
-body{
-    max-width: 1440px;
-    min-width: 960px;
-    margin: 0 auto 0 auto;
-}
-
-/* ヘッダー */
-#header{
-    position: relative;
-
-}
-#logo{
-    width: 400px;
-    position: absolute;
-    top: 20px;
-    left: 40px;
-    z-index: 50;
-}
-
-/* メニュー */
-#menu{
-    font-size: 22px;
-    position: absolute;
-    display: flex;
-    top: 30px;
-    right: 20px;
-    z-index: 55;
-}
-
-#menu > a{
-    margin-left: 28px;
-}
-
-#menu > a:link{
-    color: #003DB9;
-    text-decoration: none;
-}
-
-#menu > a:visited{
-    color: #003DB9;
-}
-
-/* ホバーでジャンプ */
-@keyframes wave {
-    100% {
-      transform: translate3d(0, -10px, 0);
-    }
-}
-  
-.wave span {
-display: inline-block;
-}
-
-.wave:hover span {
-animation-name: wave;
-animation-duration: .2s;
-animation-direction: alternate;
-animation-iteration-count: 2;
-}
-
-.wave:hover span:nth-child(2) {
-animation-delay: .1s;
-}
-
-.wave:hover span:nth-child(3) {
-animation-delay: .2s;
-}
-
-.wave:hover span:nth-child(4) {
-animation-delay: .3s;
-}
-
-.wave:hover span:nth-child(5) {
-    animation-delay: .4s;
-}
-
-.wave:hover span:nth-child(6) {
-    animation-delay: .5s;
-}
-
-.wave:hover span:nth-child(7) {
-    animation-delay: .6s;
-}
-
-.wave:hover span:nth-child(8) {
-    animation-delay: .7s;
-}
-    
-        
-/* メインビジュアル */
-#mainvisual{
-    position: relative;
-}
-
-.mainimg {
-    -webkit-mask-image: url("img/mask.png");
-    mask-image: url("img/mask.png");
-    border-radius: 0 0 30px 30px;
-	position: absolute;
-	width: 100%;
-	opacity: 0;
-	animation: change-img-anim 15s infinite;
-}
-
-.mainimg:nth-of-type(2) {
-	animation-delay: 5s;
-}
-
-.mainimg:nth-of-type(3) {
-	animation-delay: 10s;
-}
-
-@keyframes change-img-anim {
-	0%{ opacity: 0;}
-	10%{ opacity: 1;}
-    28%{ opacity: 1;}
-	38%{ opacity: 0;}
-	100%{ opacity: 0;}
-}
-
-/* タイトル (左寄せ）*/
-.index{
-    position: relative;
-}
-
-.title{
-    position: absolute;
-    right: 380px;
-    top: -30px;
-}
-
-.title > h2{
-    font-size: 60px;
-    color: #187FC4;
-
-}
-.title > h2::first-letter{
-    font-size: 80px;
-}
-
-/* タイトル（右寄せ） */
-
-.img-reverse{
-    position: absolute;
-    right: 0;
-    bottom: 0;
-}
-
-.title-reverse{
-    position: absolute;
-    left: 380px;
-    bottom: 30px;
-}
-
-.title-reverse > h2{
-    font-size: 60px;
-    color: #187FC4;
-}
-.title-reverse > h2::first-letter{
-    font-size: 80px;
 }
 
 /*========= 流れるテキスト ===============*/
 
 /*全共通*/
 
-/* .slide-in {
-	overflow: hidden;
+.slide-in {
+    overflow: hidden;
     display: inline-block;
-} */
+}
 
-/* .slide-in_inner {
-	display: inline-block;
- */
-/* } */
+.slide-in_inner {
+    display: inline-block;
+}
 
 /*左右のアニメーション*/
-/* .leftAnime{
-    opacity: 0;事前に透過0にして消しておく
-} */
+.leftAnime{
+    opacity: 0; /* 事前に透過0にして消しておく */
+}
 
-/* .rightAnime{
-    opacity: 0;事前に透過0にして消しておく
-} */
+.rightAnime{
+    opacity: 0; /* 事前に透過0にして消しておく */
+}
 
-/* .slideAnimeLeftRight {
-	animation-name:slideTextX100;
-	animation-duration:0.9s;
-	animation-fill-mode:forwards;
+.slideAnimeLeftRight {
+    animation-name:slideTextX100;
+    animation-duration:0.9s;
+    animation-fill-mode:forwards;
     opacity: 0;
-} */
+}
 
-/* @keyframes slideTextX100 {
-  from {
-	transform: translateX(-100%); 要素を左の枠外に移動
+@keyframes slideTextX100 {
+from {
+    transform: translateX(-100%); /* 要素を左の枠外に移動 */
         opacity: 0;
-  } */
+}
 
-  /* to {
-	transform: translateX(0);要素を元の位置に移動
+to {
+    transform: translateX(0);/* 要素を元の位置に移動 */
     opacity: 1;
-  }
-} */
+}
+}
 
-/* .slideAnimeRightLeft {
-	animation-name:slideTextX-100;
-	animation-duration:0.9s;
-	animation-fill-mode:forwards;
+.slideAnimeRightLeft {
+    animation-name:slideTextX-100;
+    animation-duration:0.9s;
+    animation-fill-mode:forwards;
     opacity: 0;
-} */
+}
 
 
-/* @keyframes slideTextX-100 {
-  from {
-	transform: translateX(100%);要素を右の枠外に移動
+@keyframes slideTextX-100 {
+from {
+    transform: translateX(100%);/* 要素を右の枠外に移動 */
     opacity: 0;
-  }
+}
 
-  to {
-	transform: translateX(0);要素を元の位置に移動
+to {
+    transform: translateX(0);/* 要素を元の位置に移動 */
     opacity: 1;
-  }
-} */
-
-/* 交野市って？ */
-#about{
-    margin: 0 auto 0 auto;
-    padding-top: 1000px;
-    position: relative;
+}
 }
 
-#explanation{
-    margin-top: 150px;
-    display: flex;
+/* ふわっと出てくる動き */
+.fadeUpTrigger{
+    opacity: 0;
 }
-
-#explanation-left{
-    margin-left: 100px;
-    padding-right: 20px;
-    width: 715px;
+.fadeUp {
+    animation-name: fadeUpAnime;
+    animation-duration:1s;
+    animation-fill-mode:forwards;
+    opacity: 0;
 }
-
-#explanation-left > .large{
-    font-size: 28px;
-    font-weight: bold;
+@keyframes fadeUpAnime{
+from {
+    opacity: 0;
+    transform: translateY(100px);
 }
-
-/* 背景を星の形にくり抜いてるやつ */
-.star{
-    width: 500px;
-    height: 500px;
-
-    -webkit-mask-image: url(img/star.png);
-	-webkit-mask-size: contain;
-	-webkit-mask-repeat: no-repeat;
-	-webkit-mask-position: center;
-
-	mask-image: url(img/star.png);
-	mask-size: contain;
-	mask-repeat: no-repeat;
-	mask-position: center;
-
-    position: absolute;
-    z-index: -1;
+to {
+    opacity: 1;
+    transform: translateY(0);
 }
-
-.img-large{
-    width: 587px;
-    height: 587px;
-}
-
-.yellow{
-    background-color: #FFFD84;
-}
-
-#explanation-left > .img-large{
-    top: 1350px;
-    transform: rotate(-15deg);
-}
-
-#explanation-right{
-    display: flex;
-    align-items: center;
-}
-
-#explanation-right > img{
-    border-radius: 20px;
-    height: 500px;
-}
-
-/* 背景色 */
-.back-diagonal{
-    position: absolute;
-    top: 600px;
-    height: 2000px;
-    width: 1440px;
-    background-color: #F2FEFF;
-    clip-path: polygon(0 0, 100% 0%, 100% 100%, 0 90%);
-    z-index: -10;
 }
 
 
-/* 絶景を知って！ */
-#superbview{
-    margin: 250px auto 0 auto;
-    padding-top: 250px;
-}
 
-.introductory-left{
-    padding-top: 250px;
-    margin-left: 50px;
-}
-
-.introductory-left > p{
-    line-height: 50px;
-    font-size: 25px;
-}
-
-/* ピーコックグリーンの星 */
-.img-medium{
-    height: 380px;
-    width: 380px;
-}
-
-.peacock{
-    background-color: #73F2EB;
-}
-
-#superbview > .img-medium{
-    top: 2600px;
-    left: 850px;
-    transform: rotate(15deg);
-}
-
-/* 青の星 */
-.img-small{
-    height: 222px;
-    width: 222px;
-}
-
-.blue{
-    background-color: #9FDDFF;
-}
-
-#superbview > .img-small{
-    top: 2850px;
-    left: 1150px;
-    transform: rotate(-5deg);
-}
-/* 画像と説明文（交野山） */
-.mountain{
-    margin: 150px 100px 0 65px;
-    display: flex;
-    position: relative;
-}
-
-.viewimage{
-    border-radius: 20px;
-    border: 20px solid #BAFFEE;
-}
-
-.viewintro{
-    background-color: #BAFFEE;
-    border-radius: 20px;
-    padding: 20px;
-    height: 500px;
-    width: 667px;
-}
-
-#viewimage-left{
-    z-index: 10;
-}
-
-#viewintro-right{
-    position: absolute;
-    top: 105px;
-    left: 600px;
-    z-index: 1;
-}
-
-#viewintro-right > h3{
-    margin-top: 30px;
-    margin-left: 100px;
-}
-
-.viewintro > h3{
-    font-size: 32px;
-}
-
-#viewintro-right > p{
-    margin-left: 100px;
-}
-
-/* 画像と説明文（星のブランコ） */
-.bridge{
-    margin: 300px 100px 0 65px;
-    display: flex;
-    position: relative;
-}
-
-#viewimage-right{
-    position: absolute;
-    left:600px;
-    z-index: 20;
-}
-
-#viewintro-left{
-    position: absolute;
-    top: 105px;
-    z-index: 11;
-}
-
-#viewintro-left > p{
-    margin-right: 100px;
-}
-
-
-/* もっと見るボタン */
-
-.more{
-    position: absolute;
-    top: 550px;
-    right: 10px;
-    z-index: 5;
-    background-color: #187FC4;
-    color: #ffffff;
-    width: 150px;
-    height: 45px;
-    padding-left: 1em;
-    padding-top: 1em;
-    border-radius: 10px;
-    background-image: url(img/arrow.png);
-    background-size: 30px;
-    background-repeat: no-repeat;
-    background-position: 90% 50%;
-}
-
-.more > a:link{
-    color: #ffffff;
-    text-decoration: none;
-
-}
-
-.more > a:hover{
-    color: #ffffff;
-}
-
-.more > a:visited{
-    color: #ffffff;
-    text-decoration: none;
-}
-
-.btn::after {
-    position: absolute;
-    bottom: 10px;
-    left: 1em;
-    content: '';
-    width: 82%;
-    height: 2px;
-    background-color: #fafafa;
-    transform: scale(0, 1);
-    transform-origin: left top;
-    transition: transform .3s;
-}
-
-.btn:hover::after {
-    transform: scale(1, 1);
-}
-
-#more-left{
-    left: 400px;
-    z-index: 15;
-}
-
-/* 歴史を知って！ */
-#history{
-    margin: 955px auto 0 auto;
-    position: relative;
-}
-
-.introductory-right{
-    margin-top: 250px;
-    margin-right: 50px;
-}
-
-.introductory-right > p{
-    text-align: right;
-    line-height: 50px;
-    font-size: 25px;
-}
-
-/* 青い星 */
-#history > .img-medium{
-    top: 300px;
-    left: 350px;
-    transform: rotate(-15deg);
-}
-
-/* 紫の星 */
-.purple{
-    background-color: #AE88FF;
-}
-
-#history > .img-small{
-    top: 630px;
-    left: 250px;
-    transform: rotate(10deg);
-}
-
-
-#indexes{
-    margin: 300px auto 0 auto;
-}
-
-/* アコーディオン部分 */
-/*アコーディオン全体*/
-.accordion-area{
-    list-style: none;
-    width: 100%;
-    margin:0 auto;
-    padding-left: 0;
-}
-
-.accordion-area li{
-    margin-top: 40px;
-}
-
-.accordion-area section {
-	border: 1px solid #D4BFFF;
-    border-radius: 20px;
-    background-color: #ffffff;
-}
-
-/*アコーディオンタイトル*/
-.history-index {
-    position: relative;/*+マークの位置基準とするためrelative指定*/
-    cursor: pointer;
-    font-size:32px;
-    padding: 2% 2% 2% 80px;
-    transition: all .5s ease;
-    background-color: #D4BFFF;
-    margin: 0;
-    border-radius: 20px;
-}
-
-/*アイコンの＋と×*/
-.history-index::before,
-.history-index::after{
-    position: absolute;
-    content:'';
-    width: 25px;
-    height: 3px;
-    background-color: #000;
+/* =========
+    PC用 
+==========*/
+@media screen and (min-width:961px){
     
-}
-.history-index::before{
-    top:48%;
-    left: 15px;
-    transform: rotate(0deg);
+    /* 横幅・フォントサイズ設定 */
+    body{
+        max-width: 1440px;
+        min-width: 961px;
+        margin: 0 auto 0 auto;
+        font-size: 18px;
+    }
+
+    /* ヘッダー */
+    #header{
+        position: relative;
+
+    }
+    #logo{
+        width: 400px;
+        position: absolute;
+        top: 40px;
+        left: 30px;
+        z-index: 50;
+    }
+
+    /* メニュー */
+    #menu{
+        font-size: 22px;
+        position: absolute;
+        display: flex;
+        top: 20px;
+        right: 20px;
+        z-index: 55;
+    }
+
+    #menu > a{
+        margin-left: 28px;
+    }
+
+    #menu > a:link{
+        color: #003DB9;
+        text-decoration: none;
+    }
+
+    #menu > a:visited{
+        color: #003DB9;
+    }
+
+    /* ホバーでジャンプ */
+    @keyframes wave {
+        100% {
+        transform: translate3d(0, -10px, 0);
+        }
+    }
     
-}
-.history-index::after{    
-    top:48%;
-    left: 15px;
-    transform: rotate(90deg);
-
-}
-
-/*　closeというクラスがついたら形状変化　*/
-.history-index.close::before{
-	transform: rotate(45deg);
-}
-
-.history-index.close::after{
-	transform: rotate(-45deg);
-}
-
-/*アコーディオンで現れるエリア*/
-.box {
-    display: none; 
-    background: #fff;
-	margin:0 3% 3% 3%;
-    padding: 3%;
-}
-
-.trivia{
-    float: left;
-    width: 800px;
-}
-
-.pict > img{
-   margin-left: 75px;
-   border-radius: 20px;
-}
-
-#kitadatei{
-    text-align: center;
-}
-
-#kitadatei > img{
-    border-radius: 20px;
-}
-
-#seisyounagon{
-    margin-top: 60px;
-    margin-right: 120px;
-    text-align: right;
-}
-
-#makuranosoushi{
-    font-family: "shinryu", sans-serif;
-    font-weight: 400;
-    font-style: normal;
-    font-size: 32px;
-    text-align: center;
-    margin-bottom: 30px;
-    background-color: #D5EAD8;
-    border-radius: 50%;
-    box-shadow: inset 0 0 15px 15px #fff;
-}
-
-#makuranosoushi > p:nth-child(1){
-    text-indent: -15em;
-}
-
-#makuranosoushi > p:nth-child(2){
-    text-indent: -2em;
-}
-
-#makuranosoushi > p:nth-child(3){
-    text-indent: 3em;
-}
-
-/* 背景色 */
-.back-trapezoid{
-    position: absolute;
-    top: 0px;
-    height: 2050px;
-    width: 100%;
-    background-color: #F2FEFF;
-    clip-path: polygon(0 10%, 100% 0%, 100% 100%, 0 90%);
-    z-index: -11;
-}
-
-/* ロマンを知って！ */
-
-#dreamy{
-    margin: 250px auto 0 auto;
-    padding-top: 250px;
-    position: relative;
-}
-
-/* ピーコックグリーンの星 */
-#dreamy >.img-small{
-    top: 450px;
-    left: 700px;
-    transform: rotate(-10deg);
-}
-
-/* 黄色の星 */
-#dreamy >.img-medium{
-    top: 550px;
-    left: 900px;
-    transform: rotate(-30deg);
-}
-
-
-#legend-map{
-    margin: 200px auto 0 auto;
-}
-
-#legend-map > p{
-    font-size: 32px;
-    color: #187FC4;
-    text-align: center;
-}
-
-#legend-map{
-    text-align: center;
-}
-
-#legend-map >img{
-    border-radius: 20px;
-    
-}
-
-/* クリッカブルマップ */
-/*全て共通：hideエリアをはじめは非表示*/
-.hide-area{
-	display: none;
-}
-
-/*全て共通：モーダルのボタンの色を変更したい場合*/
-.modaal-close:after, 
-.modaal-close:before{
-	background:#ccc;	
-}
-
-.modaal-close:focus:after,
-.modaal-close:focus:before,
-.modaal-close:hover:after,
-.modaal-close:hover:before{
-	background:#666;
-}
-
-/* アクセス */
-#access{
-    margin: 250px auto 0 auto;
-    background-color: #F2FEFF;
-    height: 400px;
-}
-
-#access > p{
-    font-size: 50px;
-    text-align: center;
-    line-height: 400px;
-}
-
-#access-link{
+    .wave span {
     display: inline-block;
-    position: relative;
-    transition: 0.5s;
+    }
+
+    .wave:hover span {
+    animation-name: wave;
+    animation-duration: .2s;
+    animation-direction: alternate;
+    animation-iteration-count: 2;
+    }
+
+    .wave:hover span:nth-child(2) {
+    animation-delay: .1s;
+    }
+
+    .wave:hover span:nth-child(3) {
+    animation-delay: .2s;
+    }
+
+    .wave:hover span:nth-child(4) {
+    animation-delay: .3s;
+    }
+
+    .wave:hover span:nth-child(5) {
+        animation-delay: .4s;
+    }
+
+    .wave:hover span:nth-child(6) {
+        animation-delay: .5s;
+    }
+
+    .wave:hover span:nth-child(7) {
+        animation-delay: .6s;
+    }
+
+    .wave:hover span:nth-child(8) {
+        animation-delay: .7s;
+    }
+
+    #nav-sp{
+        display: none;
+    }
+        
+            
+    /* メインビジュアル */
+    #mainvisual{
+        position: relative;
+        width: 100%;
+    }
+
+    .mainimg {
+        -webkit-mask-image: url("img/mask.png");
+        mask-image: url("img/mask.png");
+        border-radius: 0 0 30px 30px;
+        position: absolute;
+        width: 100%;
+        opacity: 0;
+        animation: change-img-anim 15s infinite;
+    }
+
+    .mainimg:nth-of-type(2) {
+        animation-delay: 5s;
+    }
+
+    .mainimg:nth-of-type(3) {
+        animation-delay: 10s;
+    }
+
+    @keyframes change-img-anim {
+        0%{ opacity: 0;}
+        10%{ opacity: 1;}
+        28%{ opacity: 1;}
+        38%{ opacity: 0;}
+        100%{ opacity: 0;}
+    }
+
+    /* タイトル (左寄せ）*/
+    .index{
+        position: relative;
+    }
+
+    .title{
+        position: absolute;
+        right: 28%;
+        top: -30px;
+    }
+
+    .title > h2{
+        font-size: 60px;
+        color: #187FC4;
+        text-shadow: 2px  2px 1px #ffffff,-2px  2px 1px #ffffff,2px -2px 1px #ffffff,-2px -2px 1px #ffffff,
+        2px  0px 1px #ffffff,0px  2px 1px #ffffff,-2px  0px 1px #ffffff,0px -2px 1px #ffffff;
+    }
+
+    /* タイトル（右寄せ） */
+
+    .img-reverse{
+        position: absolute;
+        right: 0;
+        bottom: 0;
+    }
+
+    .title-reverse{
+        position: absolute;
+        right: 42%;
+        bottom: 30px;
+    }
+
+    .title-reverse > h2{
+        font-size: 60px;
+        color: #187FC4;
+        text-shadow: 2px  2px 1px #ffffff,-2px  2px 1px #ffffff,2px -2px 1px #ffffff,-2px -2px 1px #ffffff,
+        2px  0px 1px #ffffff,0px  2px 1px #ffffff,-2px  0px 1px #ffffff,0px -2px 1px #ffffff;
+    }
+    .title-reverse > h2::first-letter{
+        font-size: 80px;
+    }
+
+    /* 交野市って？ */
+    #about{
+        width: 100%;
+        margin: 0 auto 0 auto;
+        padding-top: 1000px;
+        position: relative;
+    }
+
+    #explanation{
+        margin-top: 150px;
+        display: flex;
+    }
+
+    #explanation-left{
+        margin-left: 100px;
+        padding-right: 20px;
+        width: 715px;
+    }
+
+    #explanation-left > .large{
+        font-size: 28px;
+        font-weight: bold;
+    }
+
+    /* 背景を星の形にくり抜いてるやつ */
+    .star{
+        width: 500px;
+        height: 500px;
+
+        -webkit-mask-image: url(img/star.png);
+        -webkit-mask-size: contain;
+        -webkit-mask-repeat: no-repeat;
+        -webkit-mask-position: center;
+
+        mask-image: url(img/star.png);
+        mask-size: contain;
+        mask-repeat: no-repeat;
+        mask-position: center;
+
+        position: absolute;
+        z-index: -1;
+    }
+
+    .img-large{
+        width: 587px;
+        height: 587px;
+    }
+
+    .yellow{
+        background-color: #FFFD84;
+    }
+
+    #explanation-left > .img-large{
+        top: 1350px;
+        transform: rotate(-15deg);
+    }
+
+    #explanation-right{
+        display: flex;
+        align-items: center;
+    }
+
+    #explanation-right > img{
+        border-radius: 20px;
+        height: 500px;
+    }
+
+    /* 背景色 */
+    .back-diagonal{
+        position: absolute;
+        top: 600px;
+        height: 2000px;
+        width: 100%;
+        background-color: #F2FEFF;
+        clip-path: polygon(0 0, 100% 0%, 100% 100%, 0 90%);
+        z-index: -10;
+    }
+
+
+    /* 絶景を知って！ */
+    #superbview{
+        width: 100%;
+        margin: 250px auto 0 auto;
+        padding-top: 250px;
+    }
+
+    .introductory-left{
+        padding-top: 250px;
+        margin-left: 50px;
+    }
+
+    .introductory-left > p{
+        line-height: 50px;
+        font-size: 25px;
+    }
+
+    /* ピーコックグリーンの星 */
+    .img-medium{
+        height: 380px;
+        width: 380px;
+    }
+
+    .peacock{
+        background-color: #73F2EB;
+    }
+
+    #superbview > .img-medium{
+        top: 2700px;
+        left: 50%;
+        transform: rotate(15deg);
+    }
+
+    /* 青の星 */
+    .img-small{
+        height: 222px;
+        width: 222px;
+    }
+
+    .blue{
+        background-color: #9FDDFF;
+    }
+
+    #superbview > .img-small{
+        top: 2950px;
+        left: 75%;
+        transform: rotate(-5deg);
+    }
+    /* 画像と説明文（交野山） */
+    .mountain{
+        margin: 150px auto 0 auto;
+        display: flex;
+        position: relative;
+    }
+
+    .viewimage{
+        border-radius: 20px;
+        border: 20px solid #BAFFEE;
+        width: 627px;
+    }
+
+    .viewintro{
+        background-color: #BAFFEE;
+        border-radius: 20px;
+        padding: 20px;
+        height: 440px;
+        width: 587px;
+        border: 20px solid #BAFFEE;
+    }
+
+    #viewimage-left{
+        z-index: 10;
+    }
+
+    #viewintro-right{
+        position: absolute;
+        top: 105px;
+        left: 565px;
+        z-index: 1;
+    }
+
+    #viewintro-right > h3{
+        margin-top: -10px;
+        margin-left: 70px;
+    }
+
+    .viewintro > h3{
+        font-size: 32px;
+    }
+
+    #viewintro-right > p{
+        margin-left: 70px;
+    }
+
+    /* 画像と説明文（星のブランコ） */
+    .bridge{
+        margin: 300px auto 0 auto;
+        display: flex;
+        position: relative;
+    }
+
+    #viewimage-right{
+        position: absolute;
+        left:600px;
+        z-index: 20;
+    }
+
+    #viewintro-left{
+        position: absolute;
+        top: 105px;
+        z-index: 11;
+    }
+
+    #viewintro-left > h3{
+        margin-top: 0px;
+    }
+
+    #viewintro-left > p{
+        margin-right: 40px;
+        padding-right: 20px;
+    }
+
+
+    /* もっと見るボタン */
+
+    .more{
+        position: absolute;
+        top: 550px;
+        right: 15%;
+        z-index: 5;
+        background-color: #187FC4;
+        color: #ffffff;
+        width: 150px;
+        height: 45px;
+        padding-left: 1em;
+        padding-top: 1em;
+        border-radius: 10px;
+        background-image: url(img/arrow.png);
+        background-size: 30px;
+        background-repeat: no-repeat;
+        background-position: 90% 50%;
+    }
+
+    .more > a:link{
+        color: #ffffff;
+        text-decoration: none;
+
+    }
+
+    .more > a:hover{
+        color: #ffffff;
+    }
+
+    .more > a:visited{
+        color: #ffffff;
+        text-decoration: none;
+    }
+
+    .btn::after {
+        position: absolute;
+        bottom: 10px;
+        left: 1em;
+        content: '';
+        width: 82%;
+        height: 2px;
+        background-color: #fafafa;
+        transform: scale(0, 1);
+        transform-origin: left top;
+        transition: transform .3s;
+    }
+
+    .btn:hover::after {
+        transform: scale(1, 1);
+    }
+
+    #more-left{
+        left: 400px;
+        z-index: 15;
+    }
+
+    /* 歴史を知って！ */
+    #history{
+        width: 100%;
+        margin: 955px auto 0 auto;
+        position: relative;
+    }
+
+    .introductory-right{
+        margin-top: 250px;
+        margin-right: 50px;
+    }
+
+    .introductory-right > p{
+        text-align: right;
+        line-height: 50px;
+        font-size: 25px;
+    }
+
+    /* 青い星 */
+    #history > .img-medium{
+        top: 300px;
+        left: 15%;
+        transform: rotate(-15deg);
+    }
+
+    /* 紫の星 */
+    .purple{
+        background-color: #AE88FF;
+    }
+
+    #history > .img-small{
+        top: 630px;
+        left: 10%;
+        transform: rotate(10deg);
+    }
+
+
+    #indexes{
+        margin: 300px auto 0 auto;
+    }
+
+    /* アコーディオン部分 */
+    /*アコーディオン全体*/
+    .accordion-area{
+        list-style: none;
+        width: 90%;
+        margin:0 auto;
+        padding-left: 0;
+    }
+
+    .accordion-area li{
+        margin-top: 40px;
+    }
+
+    .accordion-area section {
+        border: 1px solid #D4BFFF;
+        border-radius: 20px;
+        background-color: #ffffff;
+    }
+
+    /*アコーディオンタイトル*/
+    .history-index {
+        position: relative;/*+マークの位置基準とするためrelative指定*/
+        cursor: pointer;
+        font-size:32px;
+        padding: 2% 2% 2% 80px;
+        transition: all .5s ease;
+        background-color: #D4BFFF;
+        margin: 0;
+        border-radius: 20px;
+    }
+
+    /*アイコンの＋と×*/
+    .history-index::before,
+    .history-index::after{
+        position: absolute;
+        content:'';
+        width: 25px;
+        height: 3px;
+        background-color: #000;
+        
+    }
+    .history-index::before{
+        top:48%;
+        left: 15px;
+        transform: rotate(0deg);
+        
+    }
+    .history-index::after{    
+        top:48%;
+        left: 15px;
+        transform: rotate(90deg);
+
+    }
+
+    /*　closeというクラスがついたら形状変化　*/
+    .history-index.close::before{
+        transform: rotate(45deg);
+    }
+
+    .history-index.close::after{
+        transform: rotate(-45deg);
+    }
+
+    /*アコーディオンで現れるエリア*/
+    .box {
+        display: none; 
+        background: #fff;
+        margin:0 3% 3% 3%;
+        padding: 3%;
+    }
+
+    .trivia{
+        float: left;
+        width: 800px;
+    }
+
+    .pict > img{
+    margin-left: 75px;
+    border-radius: 20px;
+    }
+
+    #kitadatei{
+        text-align: center;
+    }
+
+    #kitadatei > img{
+        border-radius: 20px;
+    }
+
+    #seisyounagon{
+        margin-top: 60px;
+        margin-right: 120px;
+        text-align: right;
+    }
+
+    #makuranosoushi{
+        font-family: "shinryu", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+        font-size: 32px;
+        text-align: center;
+        margin-bottom: 30px;
+        background-color: #D5EAD8;
+        border-radius: 50%;
+        box-shadow: inset 0 0 15px 15px #fff;
+    }
+
+    #makuranosoushi > p:nth-child(1){
+        text-indent: -15em;
+    }
+
+    #makuranosoushi > p:nth-child(2){
+        text-indent: -2em;
+    }
+
+    #makuranosoushi > p:nth-child(3){
+        text-indent: 3em;
+    }
+
+    /* 背景色 */
+    .back-trapezoid{
+        position: absolute;
+        top: 0px;
+        height: 2050px;
+        width: 100%;
+        background-color: #F2FEFF;
+        clip-path: polygon(0 10%, 100% 0%, 100% 100%, 0 90%);
+        z-index: -11;
+    }
+
+    /* ロマンを知って！ */
+
+    #dreamy{
+        width: 100%;
+        margin: 250px auto 0 auto;
+        padding-top: 250px;
+        position: relative;
+    }
+
+    /* ピーコックグリーンの星 */
+    #dreamy >.img-small{
+        top: 450px;
+        left: 58%;
+        transform: rotate(-10deg);
+    }
+
+    /* 黄色の星 */
+    #dreamy >.img-medium{
+        top: 550px;
+        left: 68%;
+        transform: rotate(-30deg);
+    }
+
+
+    #legend-map{
+        margin: 200px auto 0 auto;
+        text-align: center;
+    }
+
+    #legend-map > p{
+        font-size: 32px;
+        color: #187FC4;
+        text-align: center;
+    }
+
+    #legend-map >img{
+        border-radius: 20px;
+        width: 90%;
+        
+    }
+
+    /* クリッカブルマップ */
+    /*全て共通：hideエリアをはじめは非表示*/
+    .hide-area{
+        display: none;
+    }
+
+    /*全て共通：モーダルのボタンの色を変更したい場合*/
+    .modaal-close:after, 
+    .modaal-close:before{
+        background:#ccc;	
+    }
+
+    .modaal-close:focus:after,
+    .modaal-close:focus:before,
+    .modaal-close:hover:after,
+    .modaal-close:hover:before{
+        background:#666;
+    }
+
+    #legend-letter{
+        display: none;
+    }
+
+    /* アクセス */
+    #access{
+        margin: 250px auto 0 auto;
+        background-color: #F2FEFF;
+        height: 400px;
+    }
+
+    #access > p{
+        font-size: 50px;
+        text-align: center;
+        line-height: 400px;
+    }
+
+    #access-link{
+        display: inline-block;
+        position: relative;
+        transition: 0.5s;
+    }
+
+    #access-link::after {
+        position: absolute;
+        left: 0;
+        content: '';
+        width: 100%;
+        height: 3px;
+        background: #003DB9;
+        bottom: 150px;
+        transform: scale(0, 1);
+        transform-origin: center top; /*変形（アンダーラインの伸長）の原点がaタグ（各メニュー）の右端*/
+        transition: transform 0.5s;   /*変形の時間*/
+    }
+    #access-link:link{
+        color: #003DB9;
+        text-decoration: none;
+    }
+
+    #access-link:hover{
+        transform: scale(1.1);
+    }
+        
+    #access-link:hover::after {
+        transform: scale(1, 1); /*ホバー後、x軸方向に1（相対値）伸長*/
+    }
+
+    #access-link:visited{
+        color: #003DB9;
+        text-decoration: none;
+    }
+
+    /* フッター */
+    footer{
+        margin: 100px auto 30px auto;
+    }
+
+    /* TOPへ戻るボタン */
+    #page-top a{
+        display: flex;
+        justify-content:center;
+        align-items:center;
+        background:#187FC4;
+        border-radius: 50%;
+        width: 60px;
+        height: 60px;
+        color: #fff;
+        font-size: 0.8rem;
+        text-align: center;
+        text-transform: uppercase; 
+        text-decoration: none;
+        transition:all 0.3s;
+    }
+
+    #page-top a:hover{
+        background: #FFFD84;
+        color: #187FC4;
+    }
+
+    /*リンクを右下に固定*/
+    #page-top {
+        position: fixed;
+        right: 20px;
+        z-index: 100;
+        /*はじめは非表示*/
+        opacity: 0;
+        transform: translateY(100px);
+    }
+
+    /*　上に上がる動き　*/
+
+    #page-top.UpMove{
+        animation: UpAnime 0.5s forwards;
+    }
+    @keyframes UpAnime{
+    from {
+        opacity: 0;
+        transform: translateY(100px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    }
+
+    /*　下に下がる動き　*/
+
+    #page-top.DownMove{
+        animation: DownAnime 0.5s forwards;
+    }
+    @keyframes DownAnime{
+    from {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(100px);
+    }
+    }
+
+    /* ロゴ */
+    #footer-logo{
+        margin: 0 auto;
+        width: fit-content;
+    }
+
+    #footer-logo > img{
+        height: 150px;
+        text-align: center;
+    }
+
+    #copyright{
+        text-align: center;
+        font-size: 20px;
+    }
+
 }
 
-#access-link::after {
-    position: absolute;
-    left: 0;
-    content: '';
-    width: 100%;
-    height: 3px;
-    background: #003DB9;
-    bottom: 150px;
-    transform: scale(0, 1);
-    transform-origin: center top; /*変形（アンダーラインの伸長）の原点がaタグ（各メニュー）の右端*/
-    transition: transform 0.5s;   /*変形の時間*/
-}
-#access-link:link{
-    color: #003DB9;
-    text-decoration: none;
-}
-
-#access-link:hover{
-    transform: scale(1.1);
-}
+/* =========
+ タブレット用
+ ==========*/
+@media screen and (min-width:768px) and (max-width:960px){
     
-#access-link:hover::after {
-    transform: scale(1, 1); /*ホバー後、x軸方向に1（相対値）伸長*/
+    /* 横幅・フォントサイズ設定 */
+    body{
+        max-width: 960px;
+        min-width: 768px;
+        margin: 0 auto 0 auto;
+        font-size: 16px;
+    }
+
+    /* ヘッダー */
+    #header{
+        position: relative;
+
+    }
+    #logo{
+        width: 200px;
+        position: absolute;
+        top: 20px;
+        left: 30px;
+        z-index: 50;
+    }
+
+    /* メニュー */
+    #menu{
+        position: absolute;
+        display: flex;
+        top: 10px;
+        right: 20px;
+        z-index: 55;
+    }
+
+    #menu > a{
+        margin-left: 28px;
+    }
+
+    #menu > a:link{
+        color: #003DB9;
+        text-decoration: none;
+    }
+
+    #menu > a:visited{
+        color: #003DB9;
+    }
+
+    #nav-sp{
+        display: none;
+    }
+            
+    /* メインビジュアル */
+    #mainvisual{
+        position: relative;
+        width: 100%;
+    }
+
+    .mainimg {
+        -webkit-mask-image: url("img/mask.png");
+        -webkit-mask-size: cover;
+        mask-image: url("img/mask.png");
+        mask-size: cover;
+        border-radius: 0 0 30px 30px;
+        position: absolute;
+        width: 100%;
+        opacity: 0;
+        animation: change-img-anim 15s infinite;
+    }
+
+    .mainimg:nth-of-type(2) {
+        animation-delay: 5s;
+    }
+
+    .mainimg:nth-of-type(3) {
+        animation-delay: 10s;
+    }
+
+    @keyframes change-img-anim {
+        0%{ opacity: 0;}
+        10%{ opacity: 1;}
+        28%{ opacity: 1;}
+        38%{ opacity: 0;}
+        100%{ opacity: 0;}
+    }
+
+    /* タイトル (左寄せ）*/
+    .index{
+        position: relative;
+    }
+
+    .slide-in_inner > img{
+        width: 600px;
+    }
+
+    .title{
+        position: absolute;
+        left: 37.5vw;
+        top: -20px;
+    }
+
+    .title > h2{
+        font-size: 40px;
+        color: #187FC4;
+        text-shadow: 2px  2px 1px #ffffff,-2px  2px 1px #ffffff,2px -2px 1px #ffffff,-2px -2px 1px #ffffff,
+        2px  0px 1px #ffffff,0px  2px 1px #ffffff,-2px  0px 1px #ffffff,0px -2px 1px #ffffff;
+    }
+
+    /* タイトル（右寄せ） */
+
+    .img-reverse{
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        width: 600px;
+    }
+
+    .title-reverse{
+        position: absolute;
+        right: 33vw;
+        bottom: 10px;
+    }
+
+    .title-reverse > h2{
+        font-size: 40px;
+        color: #187FC4;
+        text-shadow: 2px  2px 1px #ffffff,-2px  2px 1px #ffffff,2px -2px 1px #ffffff,-2px -2px 1px #ffffff,
+        2px  0px 1px #ffffff,0px  2px 1px #ffffff,-2px  0px 1px #ffffff,0px -2px 1px #ffffff;
+    }
+
+    /* 交野市って？ */
+    #about{
+        width: 100%;
+        margin: 0 auto 0 auto;
+        padding-top: 700px;
+        position: relative;
+    }
+
+    /* 左側の説明文 */
+    #explanation{
+        margin: 10px auto 0 auto;
+        display: flex;
+        min-width: 768px;
+        max-width: 900px;
+    }
+
+    #explanation-left{
+        margin-left: 30px;
+        margin-right: 10px;
+        flex: 1;
+        max-width: 450px;
+        min-width: 354px;
+    }
+
+    #explanation-left > .large{
+        font-size: 20px;
+        font-weight: bold;
+    }
+
+        /* 背景を星の形にくり抜いてるやつ */
+        .star{
+            width: 500px;
+            height: 500px;
+
+            -webkit-mask-image: url(img/star.png);
+            -webkit-mask-size: contain;
+            -webkit-mask-repeat: no-repeat;
+            -webkit-mask-position: center;
+
+            mask-image: url(img/star.png);
+            mask-size: contain;
+            mask-repeat: no-repeat;
+            mask-position: center;
+
+            position: absolute;
+            z-index: -1;
+        }
+
+        .img-large{
+            width: 350px;
+            height: 350px;
+        }
+
+        .yellow{
+            background-color: #FFFD84;
+        }
+
+        #explanation-left > .img-large{
+            top: 1200px;
+            transform: rotate(-15deg);
+        }
+
+    /* 右側の画像 */
+    #explanation-right{
+        display: flex;
+        align-items: center;
+        flex: 1;
+        max-width: 450px;
+        min-width: 344px;
+    }
+
+    #explanation-right > img{
+        border-radius: 20px;
+        max-width: 450px;
+        min-width: 350px;
+    }
+
+    /* 背景色 */
+    .back-diagonal{
+        position: absolute;
+        top: 400px;
+        left: 0;
+        height: 1650px;
+        width: 100%;
+        background-color: #F2FEFF;
+        clip-path: polygon(0 0, 100% 0%, 100% 100%, 0 90%);
+        z-index: -10;
+    }
+
+
+    /* 絶景を知って！ */
+    #superbview{
+        width: 100%;
+        margin: 150px auto 0 auto;
+        padding-top: 250px;
+    }
+
+    .introductory-left{
+        padding-top: 80px;
+        margin-left: 30px;
+    }
+
+    .introductory-left > p{
+        line-height: 35px;
+        font-size: 20px;
+    }
+
+    /* ピーコックグリーンの星 */
+    .img-medium{
+        height: 200px;
+        width: 200px;
+    }
+
+    .peacock{
+        background-color: #73F2EB;
+    }
+
+    #superbview > .img-medium{
+        top: 2050px;
+        left: 60%;
+        transform: rotate(15deg);
+    }
+
+    /* 青の星 */
+    .img-small{
+        height: 100px;
+        width: 100px;
+    }
+
+    .blue{
+        background-color: #9FDDFF;
+    }
+
+    #superbview > .img-small{
+        top: 2200px;
+        left: 80%;
+        transform: rotate(-5deg);
+    }
+    /* 画像と説明文（交野山） */
+    .mountain{
+        margin: 150px auto 0 auto;
+    }
+
+    .viewimage{
+        border-radius: 20px;
+        border: 20px solid #BAFFEE;
+    }
+
+    .viewintro{
+        margin: 0 auto;
+        text-align: center;
+        background-color: #BAFFEE;
+        border-radius: 20px;
+        height: 350px;
+        width: 667px;
+        border: 20px solid #BAFFEE;
+    }
+
+    #viewimage-left{
+        z-index: 10;
+        text-align: center;
+    }
+
+    #viewintro-right > h3{
+        text-align: center;
+    }
+
+    .viewintro > h3{
+        font-size: 25px;
+    }
+
+    /* 画像と説明文（星のブランコ） */
+    .bridge{
+        margin: 150px auto 0 auto;
+    }
+
+    #viewimage-right{
+        text-align: center;
+    }
+
+    #viewintro-left > h3{
+        margin-top: 0px;
+    }
+
+    #viewintro-left > p{
+        padding: 0 40px;
+    }
+
+
+    /* もっと見るボタン */
+
+    .more{
+        margin: -20px auto;
+        background-color: #187FC4;
+        color: #ffffff;
+        width: 150px;
+        height: 45px;
+        padding-left: 1em;
+        padding-top: 1em;
+        border-radius: 10px;
+        background-image: url(img/arrow.png);
+        background-size: 30px;
+        background-repeat: no-repeat;
+        background-position: 90% 50%;
+    }
+
+    .more > a:link{
+        color: #ffffff;
+        text-decoration: none;
+
+    }
+
+    .more > a:hover{
+        color: #ffffff;
+    }
+
+    .more > a:visited{
+        color: #ffffff;
+        text-decoration: none;
+    }
+
+    .btn::after {
+        position: absolute;
+        bottom: 10px;
+        left: 1em;
+        content: '';
+        width: 82%;
+        height: 2px;
+        background-color: #fafafa;
+        transform: scale(0, 1);
+        transform-origin: left top;
+        transition: transform .3s;
+    }
+
+    .btn:hover::after {
+        transform: scale(1, 1);
+    }
+
+    #more-left{
+        left: 400px;
+        z-index: 15;
+    }
+
+    /* 歴史を知って！ */
+    #history{
+        width: 100%;
+        margin: 300px auto 0 auto;
+        position: relative;
+    }
+
+    .introductory-right{
+        padding-top: 80px;
+        margin-right: 30px;
+    }
+
+    .introductory-right > p{
+        text-align: right;
+        line-height: 35px;
+        font-size: 20px;
+    }
+
+    /* 青い星 */
+    #history > .img-medium{
+        top: 150px;
+        left: 15%;
+        transform: rotate(-15deg);
+    }
+
+    /* 紫の星 */
+    .purple{
+        background-color: #AE88FF;
+    }
+
+    #history > .img-small{
+        top: 330px;
+        left: 10%;
+        transform: rotate(10deg);
+    }
+
+
+    #indexes{
+        margin: 130px auto 0 auto;
+    }
+
+    /* アコーディオン部分 */
+    /*アコーディオン全体*/
+    .accordion-area{
+        list-style: none;
+        width: 90%;
+        margin:0 auto;
+        padding-left: 0;
+    }
+
+    .accordion-area li{
+        margin-top: 40px;
+    }
+
+    .accordion-area section {
+        border: 1px solid #D4BFFF;
+        border-radius: 20px;
+        background-color: #ffffff;
+    }
+
+    /*アコーディオンタイトル*/
+    .history-index {
+        position: relative;/*+マークの位置基準とするためrelative指定*/
+        cursor: pointer;
+        font-size:25px;
+        padding: 2% 2% 2% 80px;
+        transition: all .5s ease;
+        background-color: #D4BFFF;
+        margin: 0;
+        border-radius: 20px;
+    }
+
+    /*アイコンの＋と×*/
+    .history-index::before,
+    .history-index::after{
+        position: absolute;
+        content:'';
+        width: 25px;
+        height: 3px;
+        background-color: #000;
+        
+    }
+    .history-index::before{
+        top:48%;
+        left: 15px;
+        transform: rotate(0deg);
+        
+    }
+    .history-index::after{    
+        top:48%;
+        left: 15px;
+        transform: rotate(90deg);
+
+    }
+
+    /*　closeというクラスがついたら形状変化　*/
+    .history-index.close::before{
+        transform: rotate(45deg);
+    }
+
+    .history-index.close::after{
+        transform: rotate(-45deg);
+    }
+
+    /*アコーディオンで現れるエリア*/
+    .box {
+        display: none; 
+        background: #fff;
+        margin:0 3% 3% 3%;
+        padding: 3%;
+    }
+
+    .trivia{
+        float: left;
+        width: auto;
+    }
+
+    .pict > img{
+    border-radius: 20px;
+    margin-top: 20px;
+    }
+
+    #seisyounagon{
+        text-align: right;
+    }
+
+    #makuranosoushi{
+        font-family: "shinryu", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+        font-size: 25px;
+        text-align: center;
+        margin-bottom: 30px;
+        background-color: #D5EAD8;
+        border-radius: 50%;
+        box-shadow: inset 0 0 15px 15px #fff;
+    }
+
+    #makuranosoushi > p:nth-child(1){
+        text-indent: -15em;
+    }
+
+    #makuranosoushi > p:nth-child(2){
+        text-indent: -2em;
+    }
+
+    #makuranosoushi > p:nth-child(3){
+        text-indent: 3em;
+    }
+
+    #bush {
+        text-align: center;
+    }
+
+    #kitadatei{
+        text-align: center;
+    }
+
+    #kitadatei > img{
+        border-radius: 20px;
+        width: 100%;
+    }
+
+    #castle{
+        text-align: center;
+    }
+
+    /* 背景色 */
+    .back-trapezoid{
+        position: absolute;
+        top: -60px;
+        height: 1450px;
+        width: 100%;
+        background-color: #F2FEFF;
+        clip-path: polygon(0 10%, 100% 0%, 100% 100%, 0 90%);
+        z-index: -11;
+    }
+
+    /* ロマンを知って！ */
+
+    #dreamy{
+        width: 100%;
+        margin: 150px auto 0 auto;
+        padding-top: 250px;
+        position: relative;
+    }
+
+    /* ピーコックグリーンの星 */
+    #dreamy >.img-small{
+        top: 250px;
+        left: 58%;
+        transform: rotate(-10deg);
+    }
+
+    /* 黄色の星 */
+    #dreamy >.img-medium{
+        top: 270px;
+        left: 68%;
+        transform: rotate(-30deg);
+    }
+
+
+    #legend-map{
+        margin: 200px auto 0 auto;
+        text-align: center;
+    }
+
+    #legend-map > p{
+        font-size: 25px;
+        color: #187FC4;
+        text-align: center;
+    }
+
+    #legend-map >img{
+        border-radius: 20px;
+        width: 90%;
+        
+    }
+
+    /* クリッカブルマップ */
+    /*全て共通：hideエリアをはじめは非表示*/
+    .hide-area{
+        display: none;
+    }
+
+    /*全て共通：モーダルのボタンの色を変更したい場合*/
+    .modaal-close:after, 
+    .modaal-close:before{
+        background:#ccc;	
+    }
+
+    .modaal-close:focus:after,
+    .modaal-close:focus:before,
+    .modaal-close:hover:after,
+    .modaal-close:hover:before{
+        background:#666;
+    }
+
+    #legend-letter{
+        display: none;
+    }
+
+    /* アクセス */
+    #access{
+        margin: 250px auto 0 auto;
+        background-color: #F2FEFF;
+        height: 400px;
+    }
+
+    #access > p{
+        font-size: 32px;
+        text-align: center;
+        line-height: 400px;
+    }
+
+    #access-link{
+        display: inline-block;
+        position: relative;
+        transition: 0.5s;
+    }
+
+    #access-link::after {
+        position: absolute;
+        left: 0;
+        content: '';
+        width: 100%;
+        height: 3px;
+        background: #003DB9;
+        bottom: 150px;
+        transform: scale(0, 1);
+        transform-origin: center top; /*変形（アンダーラインの伸長）の原点がaタグ（各メニュー）の右端*/
+        transition: transform 0.5s;   /*変形の時間*/
+    }
+    #access-link:link{
+        color: #003DB9;
+        text-decoration: none;
+    }
+
+    #access-link:hover{
+        transform: scale(1.1);
+    }
+        
+    #access-link:hover::after {
+        transform: scale(1, 1); /*ホバー後、x軸方向に1（相対値）伸長*/
+    }
+
+    #access-link:visited{
+        color: #003DB9;
+        text-decoration: none;
+    }
+
+    /* フッター */
+    footer{
+        margin: 100px auto 30px auto;
+    }
+
+    /* TOPへ戻るボタン */
+    #page-top a{
+        display: flex;
+        justify-content:center;
+        align-items:center;
+        background:#187FC4;
+        border-radius: 50%;
+        width: 60px;
+        height: 60px;
+        color: #fff;
+        font-size: 0.8rem;
+        text-align: center;
+        text-transform: uppercase; 
+        text-decoration: none;
+        transition:all 0.3s;
+    }
+
+    #page-top a:hover{
+        background: #FFFD84;
+        color: #187FC4;
+    }
+
+    /*リンクを右下に固定*/
+    #page-top {
+        position: fixed;
+        right: 20px;
+        z-index: 100;
+        /*はじめは非表示*/
+        opacity: 0;
+        transform: translateY(100px);
+    }
+
+    /*　上に上がる動き　*/
+
+    #page-top.UpMove{
+        animation: UpAnime 0.5s forwards;
+    }
+    @keyframes UpAnime{
+    from {
+        opacity: 0;
+        transform: translateY(100px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    }
+
+    /*　下に下がる動き　*/
+
+    #page-top.DownMove{
+        animation: DownAnime 0.5s forwards;
+    }
+    @keyframes DownAnime{
+    from {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(100px);
+    }
+    }
+
+    /* ロゴ */
+    #footer-logo{
+        margin: 0 auto;
+        width: fit-content;
+    }
+
+    #footer-logo > img{
+        height: 100px;
+        text-align: center;
+    }
+
+    #copyright{
+        text-align: center;
+        font-size: 15px;
+    }
+
 }
 
-#access-link:visited{
-    color: #003DB9;
-    text-decoration: none;
-}
+ /* ========
+  スマホ用
+ =========*/
+ @media screen and (max-width:767px) {
 
-/* フッター */
-footer{
-    margin: 100px auto 30px auto;
-}
+    /* 横幅・フォントサイズ設定 */
+    body{
+        max-width: 430px;
+        margin: 0 auto 0 auto;
+        font-size: 16px;
+        background-color: #F2FEFF;
+    }
 
-/* TOPへ戻るボタン */
-#page-top a{
-	display: flex;
-	justify-content:center;
-	align-items:center;
-	background:#187FC4;
-	border-radius: 50%;
-	width: 60px;
-	height: 60px;
-	color: #fff;
-    font-size: 0.8rem;
-	text-align: center;
-	text-transform: uppercase; 
-	text-decoration: none;
-	transition:all 0.3s;
-}
+    /* ヘッダー */
+    #header{
+        position: relative;
+    }
 
-#page-top a:hover{
-	background: #FFFD84;
-    color: #187FC4;
-}
+    #logo{
+        width: 125px;
+        position: absolute;
+        top: 0px;
+        left: 12px;
+        z-index: 5;
+    }
 
-/*リンクを右下に固定*/
-#page-top {
-	position: fixed;
-	right: 20px;
-	z-index: 100;
-    /*はじめは非表示*/
-	opacity: 0;
-	transform: translateY(100px);
-}
+    /* メニュー */
+    #menu{
+        display: none;
+    }
 
-/*　上に上がる動き　*/
+    /* ハンバーガーメニュー */
 
-#page-top.UpMove{
-	animation: UpAnime 0.5s forwards;
-}
-@keyframes UpAnime{
-  from {
-    opacity: 0;
-	transform: translateY(100px);
-  }
-  to {
-    opacity: 1;
-	transform: translateY(0);
-  }
-}
+    /* ボタン */
+    /* ボタン外側 */
+    .openbtn{
+        position: fixed;
+        background: #003DB9;
+        cursor: pointer;
+        width: 50px;
+        height:50px;
+        border-radius: 10px;
+        top:10px;
+        right: 0;
+        z-index: 9999;
+    }
 
-/*　下に下がる動き　*/
+    /*ボタン内側*/
+    .openbtn .openbtn-area{
+        transition: all .6s;/*アニメーションの設定*/
+        width:50px;
+        height:50px;
+    }
 
-#page-top.DownMove{
-	animation: DownAnime 0.5s forwards;
-}
-@keyframes DownAnime{
-  from {
-  	opacity: 1;
-	transform: translateY(0);
-  }
-  to {
-  	opacity: 1;
-	transform: translateY(100px);
-  }
-}
+    .openbtn span{
+        display: inline-block;
+        transition: all .4s;
+        position: absolute;
+        left: 14px;
+        height: 3px;
+        border-radius: 2px;
+        background: #fff;
+        width: 45%;
+    }
 
-/* ロゴ */
-#footer-logo{
-    margin: 0 auto;
-    width: fit-content;
-}
+    .openbtn span:nth-of-type(1) {
+        top:15px;	
+    }
 
-#footer-logo > img{
-    height: 150px;
-    text-align: center;
-}
+    .openbtn span:nth-of-type(2) {
+        top:23px;
+    }
 
-#copyright{
-    text-align: center;
-    font-size: 20px;
-}
+    .openbtn span:nth-of-type(3) {
+        top:31px;
+    }
 
+    /*activeクラスが付与されると .openbtn-areaが360度回転し、その中の線が回転して×に*/
+    .openbtn.active .openbtn-area{
+        transform: rotate(360deg);
+    }
+
+    .openbtn.active span:nth-of-type(1) {
+        top: 18px;
+        left: 18px;
+        transform: translateY(6px) rotate(-45deg);
+        width: 30%;
+    }
+
+    .openbtn.active span:nth-of-type(2) {
+        opacity: 0;
+    }
+
+    .openbtn.active span:nth-of-type(3){
+        top: 30px;
+        left: 18px;
+        transform: translateY(-6px) rotate(45deg);
+        width: 30%;
+    }
+
+    #nav-sp{
+        /*position:fixed;にし、z-indexの数値を大きくして前面へ*/
+        position:fixed;
+        z-index: 999;
+        /*ナビのスタート位置と形状*/
+        top:0;
+        right: -120%;
+        width:90%;
+        height: 100vh;/*ナビの高さ*/
+        background:#003DB9;
+        /*動き*/
+        transition: all 0.6s;
+    }
+    
+    /*アクティブクラスがついたら位置を0に*/
+    #nav-sp.panelactive{
+        right: 0;
+    }
+        
+    /*ナビゲーション*/
+    #nav-sp ul {
+        /*ナビゲーション天地中央揃え*/
+        position: absolute;
+        z-index: 999;
+        top:50%;
+        left:50%;
+        transform: translate(-50%,-50%);
+    }
+    
+    /*リストのレイアウト設定*/
+    
+    #nav-sp li{
+        list-style: none;
+        text-align: center;
+        border-bottom: solid 1px #FFFFFF;
+    }
+    
+    #nav-sp li a{
+        color: #fff;
+        text-decoration: none;
+        padding:10px;
+        display: block;
+        text-transform: uppercase;
+        letter-spacing: 0.1em;
+        font-weight: bold;
+    }
+    
+
+    /* メインビジュアル */
+    #mainvisual{
+        position: relative;
+        width: 100%;
+        height: 489px;
+        padding-top: 70px;
+    }
+
+    .mainimg {
+        border-radius: 10px;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        opacity: 0;
+        object-fit: cover;
+        object-position: 70% 0;
+        animation: change-img-anim 15s infinite;
+    }
+
+    .mainimg:nth-of-type(2) {
+        animation-delay: 5s;
+        object-position: 90% 0;
+    }
+
+    .mainimg:nth-of-type(3) {
+        animation-delay: 10s;
+        object-position: 40% 0;
+    }
+
+    @keyframes change-img-anim {
+        0%{ opacity: 0;}
+        10%{ opacity: 1;}
+        28%{ opacity: 1;}
+        38%{ opacity: 0;}
+        100%{ opacity: 0;}
+    }
+
+    /* タイトル (左寄せ）*/
+    .index{
+        position: relative;
+    }
+
+    .index span span img{
+        width: 270px;
+    }
+
+    .title{
+        position: absolute;
+        left: 32%;
+        top: -15px;
+    }
+
+    .title > h2{
+        font-size: 20px;
+        color: #187FC4;
+        text-shadow: 2px  2px 1px #ffffff,-2px  2px 1px #ffffff,2px -2px 1px #ffffff,-2px -2px 1px #ffffff,
+        2px  0px 1px #ffffff,0px  2px 1px #ffffff,-2px  0px 1px #ffffff,0px -2px 1px #ffffff;
+    }
+
+    /* タイトル（右寄せ） */
+
+    .img-reverse{
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        width: 270px;
+    }
+
+    .title-reverse{
+        position: absolute;
+        right: 25%;
+        bottom: 10px;
+    }
+
+    .title-reverse > h2{
+        font-size: 20px;
+        color: #187FC4;
+        text-shadow: 2px  2px 1px #ffffff,-2px  2px 1px #ffffff,2px -2px 1px #ffffff,-2px -2px 1px #ffffff,
+        2px  0px 1px #ffffff,0px  2px 1px #ffffff,-2px  0px 1px #ffffff,0px -2px 1px #ffffff;
+    }
+
+    /* 交野市って？ */
+    #about{
+        width: 100%;
+        margin: 0 auto 0 auto;
+        padding-top: 160px;
+        position: relative;
+    }
+
+    #explanation{
+        margin-top: 70px;
+    }
+
+    #explanation-left{
+        margin: 0 auto;
+        width: 321px;
+    }
+
+    #explanation-left > .large{
+        font-size: 18px;
+        font-weight: bold;
+        text-align: center;
+    }
+    
+    /* 背景を星の形にくり抜いてるやつ */
+    .star{
+        width: 500px;
+        height: 500px;
+
+        -webkit-mask-image: url(img/star.png);
+        -webkit-mask-size: contain;
+        -webkit-mask-repeat: no-repeat;
+        -webkit-mask-position: center;
+
+        mask-image: url(img/star.png);
+        mask-size: contain;
+        mask-repeat: no-repeat;
+        mask-position: center;
+
+        position: absolute;
+        z-index: -1;
+    }
+
+    .img-large{
+        width: 300px;
+        height: 300px;
+    }
+
+    .yellow{
+        background-color: #FFFD84;
+    }
+
+    #explanation-left > .img-large{
+        top: 250px;
+        transform: rotate(-15deg);
+    }
+
+    #explanation-right{
+        text-align: center;
+    }
+
+    #explanation-right > img{
+        border-radius: 20px;
+        height: 321px;
+    }
+
+    /* 背景色 */
+    .back-diagonal{
+        position: absolute;
+        top: 250px;
+        height: 1220px;
+        width: 100%;
+        background-color: #FFFFFF;
+        z-index: -10;
+        border-radius: 15px;
+    }
+
+
+    /* 絶景を知って！ */
+    #superbview{
+        width: 100%;
+        margin: 0px auto 0 auto;
+        padding-top: 250px;
+        position: relative;
+    }
+
+    #superbview-diagonal{
+        position: absolute;
+        top: 290px;
+        width: 100%;
+        height: 1900px;
+        background-color: #FFFFFF;
+        border-radius: 15px;
+        z-index: -15;
+    }
+
+
+    .introductory-left{
+        margin: 100px auto 0 auto;
+        width: 321px;
+    }
+
+    .introductory-left > p{
+        line-height: 30px;
+    }
+
+    /* ピーコックグリーンの星 */
+    .img-medium{
+        height: 150px;
+        width: 150px;
+    }
+
+    .peacock{
+        background-color: #73F2EB;
+    }
+
+    #superbview > .img-medium{
+        top: 350px;
+        left: 50%;
+        transform: rotate(15deg);
+    }
+
+    /* 青の星 */
+    .img-small{
+        height: 80px;
+        width: 80px;
+    }
+
+    .blue{
+        background-color: #9FDDFF;
+    }
+
+    #superbview > .img-small{
+        top: 450px;
+        left: 75%;
+        transform: rotate(-5deg);
+    }
+    /* 画像と説明文（交野山） */
+    .mountain{
+        margin: 50px auto 0 auto;
+        position: relative;
+        width: 321px;
+    }
+
+    .viewimage{
+        border-radius: 20px;
+        width: 321px;
+    }
+
+    .viewintro{
+        width: 321px;
+    }
+
+
+    #viewintro-right > h3{
+        margin: 15px auto;
+        text-align: center;
+    }
+
+    .viewintro > h3{
+        font-size: 20px;
+    }
+
+
+    /* 画像と説明文（星のブランコ） */
+    .bridge{
+        margin: 100px auto 0 auto;
+        width: 321px;
+    }
+
+    #viewintro-left > h3{
+        margin: 15px auto;
+        text-align: center;
+    }
+
+
+
+    /* もっと見るボタン */
+
+    .more{
+        position: absolute;
+        top: 650px;
+        right: 0;
+        z-index: 5;
+        background-color: #187FC4;
+        color: #ffffff;
+        width: 120px;
+        height: 25px;
+        padding-left: 1em;
+        padding-top: 1em;
+        padding-bottom: 1em;
+        border-radius: 10px;
+        background-image: url(img/arrow.png);
+        background-size: 20px;
+        background-repeat: no-repeat;
+        background-position: 90% 50%;
+    }
+
+    .more > a:link{
+        color: #ffffff;
+        text-decoration: none;
+
+    }
+
+    .more > a:hover{
+        color: #ffffff;
+    }
+
+    .more > a:visited{
+        color: #ffffff;
+        text-decoration: none;
+    }
+
+    .btn::after {
+        position: absolute;
+        bottom: 10px;
+        left: 1em;
+        content: '';
+        width: 82%;
+        height: 2px;
+        background-color: #fafafa;
+        transform: scale(0, 1);
+        transform-origin: left top;
+        transition: transform .3s;
+    }
+
+    .btn:hover::after {
+        transform: scale(1, 1);
+    }
+
+    #more-left{
+        top: 665px;
+    }
+
+    /* 歴史を知って！ */
+    #history{
+        width: 100%;
+        margin: 250px auto 0 auto;
+        position: relative;
+    }
+
+    .introductory-right{
+        margin: 100px auto 0 auto;
+        width: 321px;
+    }
+
+    .introductory-right > p{
+        line-height: 30px;
+    }
+
+    /* 青い星 */
+    #history > .img-medium{
+        top: 200px;
+        left: 20%;
+        transform: rotate(-15deg);
+    }
+
+    /* 紫の星 */
+    .purple{
+        background-color: #AE88FF;
+    }
+
+    #history > .img-small{
+        top: 150px;
+        left: 10%;
+        transform: rotate(10deg);
+    }
+
+
+    #indexes{
+        margin: 50px auto 0 auto;
+    }
+
+    /* アコーディオン部分 */
+    /*アコーディオン全体*/
+    .accordion-area{
+        list-style: none;
+        margin:0 auto;
+        padding-left: 0;
+    }
+
+    .accordion-area li{
+        margin-top: 15px;
+    }
+
+    .accordion-area section {
+        border: 1px solid #D4BFFF;
+        border-radius: 20px;
+        background-color: #ffffff;
+    }
+
+    /*アコーディオンタイトル*/
+    .history-index {
+        position: relative;/*+マークの位置基準とするためrelative指定*/
+        cursor: pointer;
+        font-size:18px;
+        padding: 2% 2% 2% 80px;
+        transition: all .5s ease;
+        background-color: #D4BFFF;
+        margin: 0;
+        border-radius: 20px;
+    }
+
+    /*アイコンの＋と×*/
+    .history-index::before,
+    .history-index::after{
+        position: absolute;
+        content:'';
+        width: 25px;
+        height: 3px;
+        background-color: #000;
+        
+    }
+    .history-index::before{
+        top:48%;
+        left: 15px;
+        transform: rotate(0deg);
+        
+    }
+    .history-index::after{    
+        top:48%;
+        left: 15px;
+        transform: rotate(90deg);
+
+    }
+
+    /*　closeというクラスがついたら形状変化　*/
+    .history-index.close::before{
+        transform: rotate(45deg);
+    }
+
+    .history-index.close::after{
+        transform: rotate(-45deg);
+    }
+
+    /*アコーディオンで現れるエリア*/
+    .box {
+        display: none; 
+        background: #fff;
+        margin:0 3% 3% 3%;
+        padding: 3%;
+    }
+
+    .trivia{
+        float: left;
+        width: 327px;
+    }
+
+    .pict > img{
+    border-radius: 10px;
+    width: 150px;
+    }
+
+    #seisyounagon{
+        text-align: right;
+    }
+
+    #bush{
+        text-align: center;
+    }
+
+    #castle{
+        text-align: center;
+    }
+
+    #makuranosoushi{
+        font-family: "shinryu", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+        text-align: center;
+        margin-bottom: 30px;
+        background-color: #D5EAD8;
+        border-radius: 50%;
+        box-shadow: inset 0 0 15px 15px #fff;
+    }
+
+    #makuranosoushi > p:nth-child(1){
+        text-indent: -15em;
+    }
+
+    #makuranosoushi > p:nth-child(2){
+        text-indent: -5em;
+    }
+
+    #makuranosoushi > p:nth-child(3){
+        text-indent: -1em;
+    }
+
+    #kitadatei{
+        text-align: center;
+    }
+
+    #kitadatei > img{
+        border-radius: 10px;
+        width: 100%;
+    }
+
+    /* 背景色 */
+    .back-trapezoid{
+        position: absolute;
+        top: 130px;
+        height: 620px;
+        width: 100%;
+        background-color: #FFFFFF;
+        border-radius: 15px;
+        z-index: -11;
+    }
+
+    /* ロマンを知って！ */
+
+    #dreamy{
+        width: 100%;
+        margin: 0px auto 0 auto;
+        padding-top: 250px;
+        position: relative;
+    }
+
+    #dreamy-diagonal{
+        position: absolute;
+        top: 300px;
+        width: 100%;
+        height: 590px;
+        background-color: #FFFFFF;
+        border-radius: 15px;
+        z-index: -11;
+    }
+    /* ピーコックグリーンの星 */
+    #dreamy >.img-small{
+        top: 480px;
+        left: 18%;
+        transform: rotate(-10deg);
+    }
+
+    /* 黄色の星 */
+    #dreamy >.img-medium{
+        top: 350px;
+        left: 28%;
+        transform: rotate(-30deg);
+    }
+
+
+    #legend-map{
+        display: none;
+    }
+
+    #legend-letter{
+        width: 321px;
+        margin: 50px auto 0 auto;
+    }
+
+    #legend-letter > p{
+        font-size: 20px;
+        text-align: center;
+        line-height: 40px;
+        position: relative;
+    }
+
+    #legend-letter > p > img{
+        position: absolute;
+        bottom: 0;
+    }
+
+    .leftstar{
+        left: 0;
+    }
+    .rightstar{
+        right: 0;
+    }
+
+    .legend-link{
+        display: inline-block;
+        position: relative;
+        transition: 0.5s;
+    }
+
+    .legend-link:link{
+        color: #003DB9;
+        text-decoration: none;
+    }
+        
+    .legend-link:visited{
+        color: #003DB9;
+        text-decoration: none;
+    }
+
+
+    /*全て共通：hideエリアをはじめは非表示*/
+    .hide-area{
+        display: none;
+    }
+
+    /*全て共通：モーダルのボタンの色を変更したい場合*/
+    .modaal-close:after, 
+    .modaal-close:before{
+        background:#ccc;	
+    }
+
+    .modaal-close:focus:after,
+    .modaal-close:focus:before,
+    .modaal-close:hover:after,
+    .modaal-close:hover:before{
+        background:#666;
+    }
+
+    /* アクセス */
+    #access{
+        margin: 200px auto 0 auto;
+    }
+
+    #access > p{
+        font-size: 20px;
+        text-align: center;
+    }
+
+    #access-link{
+        display: inline-block;
+        position: absolute;
+        left: 0;
+        right: 0;
+    }
+
+    #access-link:link{
+        color: #003DB9;
+        text-decoration: none;
+    }
+        
+    #access-link:visited{
+        color: #003DB9;
+        text-decoration: none;
+    }
+
+    /* フッター */
+    footer{
+        margin: 400px auto 30px auto;
+    }
+
+    /* TOPへ戻るボタン */
+    #page-top a{
+        display: none;
+    }
+
+    /* ロゴ */
+    #footer-logo{
+        margin: 100px auto 0 auto;
+        width: fit-content;
+    }
+
+    #footer-logo > img{
+        height: 80px;
+        text-align: center;
+    }
+
+    #copyright{
+        text-align: center;
+        font-size: 12px;
+    }    
+ }

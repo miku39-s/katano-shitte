@@ -43,11 +43,39 @@
                     </a>
                 
             </nav>
+
+            <!-- スマホ用メニュー -->
+            <!-- ボタン -->
+            <div class="openbtn">
+                <div class="openbtn-area">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+            <nav id="nav-sp">
+                <!-- メニュー -->
+                <ul>
+                    <li><a class="menu" href="index.html#about">交野市って？</a></li>
+                    <li><a href="index.html#superbview">絶景を知って！</a></li>
+                    <li><a href="index.html#history">歴史を知って！</a></li>
+                    <li><a href="index.html#dreamy">ロマンを知って！</a></li>
+                    <li><a href="access.html">行き方</a></li>
+                </ul>
+            </nav>
+
         </div>
         
     </header>
     <main>
         <article>
+            <!-- パンくずリスト -->
+            <div class="breadcrumbs">
+                <hr>
+                <p><a id="breadcrumbs-link" href="index.html">TOP</a>　>　行き方</p>
+                <hr>
+            </div>
+
             <!-- スポット紹介 -->
             <section id="spotmap">
                 <div class="access-title">
@@ -62,42 +90,109 @@
                 <div class="access-title">
                     <h2>交野市への行き方</h2>                    
                 </div>
-                <div class="index">
-                    <img src="img/underline.png" alt="タイトル下線">
+                <div class="index  fadeUpTrigger">
+                    <span class="slide-in leftAnime">
+                        <span class="slide-in_inner leftAnimeInner"><img class="underline" src="img/underline.png" alt="タイトル下線"></span>
+                    </span>
                     <div class="title">
-                        <h2>公共機関での行き方</h2>
+                        <h2>
+                            <span class="slide-in leftAnime">
+                                <span class="slide-in_inner leftAnimeInner">公共機関での行き方</span>
+                            </span>
+                        </h2>
                     </div>
                 </div>
-                <div class="rootmap-img">
+                <div class="rootmap-img fadeUpTrigger">
                     <img src="img/rootmap.jpg" alt="電車で交野市に行く方法">
                 </div>
-                <div>
-                    <h3>★京阪でお越しの場合（該当駅：郡津駅、交野市駅、河内森駅、私市駅）★</h3>
-                    <h4>大阪方面・・・</h4>
-                    <p>・各線「淀屋橋駅」から京阪本線に乗り「枚方市駅」まで行き、京阪交野線に乗り換え（所要時間：約30～35分）</p>
-                    <p>・各線「京橋駅」から京阪本線に乗り「枚方市駅」まで行き、京阪交野線に乗り換え（所要時間：約25～30分）</p>
-                    <p>・「なんばOCAT」から「ダイレクトエクスプレスバス直Q京都」に乗車→「京阪交野市駅」で降車（所要時間：約35分）</p>
-                    <h4>京都方面・・・</h4>
-                    <p>・京阪本線「出町柳駅」から「枚方市駅」→京阪交野線に乗り換え（所要時間：約50～55分）</p>
-                    <p>・JR各線「京都駅」からJR奈良線「東福寺駅」で京阪本線「東福寺駅」に乗り換え「枚方市駅」まで行き、京阪交野線に乗り換え（所要時間：約65～70分）</p>
-                    <p>・近鉄奈良線「京都駅」から「近鉄丹波橋駅」で京阪本線「丹波橋駅」に乗り換え「枚方市駅」まで行き、京阪交野線に乗り換え（所要時間：約50～55分）</p>
-                    <p>・「京都駅八条口」から「ダイレクトエクスプレスバス直Q京都」に乗車→「京阪交野市駅」で降車（所要時間：約45分）</p>
+                <div class="info">
+                    <h3>
+                        <span class="slide-in leftAnime">
+                            <span class="slide-in_inner leftAnimeInner">★京阪電車でお越しの場合（該当駅：郡津駅、交野市駅、河内森駅、私市駅）★</span>
+                        </span>
+                    </h3>
+                    <h4>
+                        <span class="slide-in leftAnime">
+                            <span class="slide-in_inner leftAnimeInner">●大阪方面・・・</span>
+                        </span>
+                    </h4>
+                    <p>
+                        <span class="slide-in leftAnime">
+                            <span class="slide-in_inner leftAnimeInner">・各線「淀屋橋駅」から京阪本線に乗り「枚方市駅」まで行き、京阪交野線に乗り換え（所要時間：約30～35分）</span>
+                        </span>
+                    </p>
+                    <p>
+                        <span class="slide-in leftAnime">
+                            <span class="slide-in_inner leftAnimeInner">・各線「京橋駅」から京阪本線に乗り「枚方市駅」まで行き、京阪交野線に乗り換え（所要時間：約25～30分）</span>
+                        </span>
+                    </p>
+                    <h4>
+                        <span class="slide-in leftAnime">
+                            <span class="slide-in_inner leftAnimeInner">●京都方面・・・</span>
+                        </span>
+                    </h4>
+                    <p>
+                        <span class="slide-in leftAnime">
+                            <span class="slide-in_inner leftAnimeInner">・京阪本線「出町柳駅」から「枚方市駅」→京阪交野線に乗り換え（所要時間：約50～55分）</span>
+                        </span>
+                    </p>
+                    <p>
+                        <span class="slide-in leftAnime">
+                            <span class="slide-in_inner leftAnimeInner">・JR各線「京都駅」からJR奈良線「東福寺駅」で京阪本線「東福寺駅」に乗り換え「枚方市駅」まで行き、京阪交野線に乗り換え（所要時間：約65～70分）</span>
+                        </span>
+                    </p>
+                    <p>
+                        <span class="slide-in leftAnime">
+                            <span class="slide-in_inner leftAnimeInner">・近鉄奈良線「京都駅」から「近鉄丹波橋駅」で京阪本線「丹波橋駅」に乗り換え「枚方市駅」まで行き、京阪交野線に乗り換え（所要時間：約50～55分）</span>
+                        </span>
+                    </p>
+                    <p>
+                        <span class="slide-in leftAnime">
+                            <span class="slide-in_inner leftAnimeInner">・「京都駅八条口」から「ダイレクトエクスプレスバス直Q京都」に乗車→「京阪交野市駅」で降車（所要時間：約45分）</span>
+                        </span>
+                    </p>
                     <br>
-                    <h3>★JRでお越しの場合（該当駅：河内磐船駅、星田駅）</h3>
-                    <h4>大阪方面・・・</h4>
-                    <p>・各線「京橋駅」からJR学研都市線に乗車（所要時間：約18～20分）</p>
-                    <p>・「なんばOCAT」から「ダイレクトエクスプレスバス直Q京都」に乗車→「河内磐船駅」で降車（所要時間：約45分）</p>
-                    <h4>京都方面・・・</h4>
-                    <p>・「京都駅八条口」から「ダイレクトエクスプレスバス直Q京都」に乗車→「河内磐船駅」で降車（所要時間：約35分）</p>
+                    <h3>
+                        <span class="slide-in leftAnime">
+                            <span class="slide-in_inner leftAnimeInner">★JRでお越しの場合（該当駅：河内磐船駅、星田駅）</span>
+                        </span>
+                    </h3>
+                    <h4>
+                        <span class="slide-in leftAnime">
+                            <span class="slide-in_inner leftAnimeInner">●大阪方面・・・</span>
+                        </span>
+                    </h4>
+                    <p>
+                        <span class="slide-in leftAnime">
+                            <span class="slide-in_inner leftAnimeInner">・各線「京橋駅」からJR学研都市線に乗車（所要時間：約18～20分）</span>
+                        </span>
+                    </p>
+                    <h4>
+                        <span class="slide-in leftAnime">
+                            <span class="slide-in_inner leftAnimeInner">●京都方面・・・</span>
+                        </span>
+                    </h4>
+                    <p>
+                        <span class="slide-in leftAnime">
+                            <span class="slide-in_inner leftAnimeInner">・「京都駅八条口」から「ダイレクトエクスプレスバス直Q京都」に乗車→「河内磐船駅」で降車（所要時間：約35分）</span>
+                        </span>
+                    </p>
 
                 </div>
-                <div class="index">
-                    <img src="img/underline.png" alt="タイトル下線">
+                <div class="index fadeUpTrigger">
+                    <span class="slide-in leftAnime">
+                        <span class="slide-in_inner leftAnimeInner"><img class="underline" src="img/underline.png" alt="タイトル下線"></span>
+                    </span>
+                    
                     <div class="title">
-                        <h2>車での行き方</h2>
+                        <h2>
+                            <span class="slide-in leftAnime">
+                                <span class="slide-in_inner leftAnimeInner">車・バイクでの行き方</span>
+                            </span>
+                        </h2>
                     </div>
                 </div>
-                <div class="roadmap-img">
+                <div class="roadmap-img fadeUpTrigger">
                     <img src="img/roadmap.jpg" alt="車で交野市に行く方法">
                 </div>
 
@@ -114,7 +209,7 @@
             <img src="img/logo.png" alt="サイトロゴ">
         </div>
         <div>
-            <p id="copyright">&copy2023 Katano-Shitte! All rights reserved.</p>
+            <p id="copyright">&copy2023-2024 Katano-Shitte! All rights reserved.</p>
         </div>
     </footer>
 

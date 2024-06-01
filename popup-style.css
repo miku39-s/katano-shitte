@@ -1,90 +1,346 @@
+/* 共通設定 */
+
 body{
     font-family: 'Zen Maru Gothic', sans-serif;
-    font-size: 18px;
 }
 
-/* 横幅設定 */
-body{
-    max-width: 1440px;
-    min-width: 960px;
-    margin: 0 72px 0 72px;
-    background-color: #F2FEFF;
+/* ふわっと出てくる動き */
+.fadeUpTrigger{
+    opacity: 0;
+}
+.fadeUp {
+    animation-name: fadeUpAnime;
+    animation-duration:1s;
+    animation-fill-mode:forwards;
+    opacity: 0;
+}
+@keyframes fadeUpAnime{
+from {
+    opacity: 0;
+    transform: translateY(100px);
+}
+to {
+    opacity: 1;
+    transform: translateY(0);
+}
 }
 
-/* タイトル（右寄せ） */
-.index{
-    position: relative;
+/* =========
+    PC用 
+==========*/
+@media screen and (min-width:877px){
+
+
+    /* 横幅・フォントサイズ設定 */
+    body{
+        font-size: 18px;
+        max-width: 1040px;
+        min-width: 900px;
+        margin: 0 auto 0 auto;
+        background-color: #F2FEFF;
+    }
+
+    /* タイトル（右寄せ） */
+    .index{
+        position: relative;
+    }
+
+    .img-reverse{
+        transform: scale(-1, 1);
+        position: absolute;
+        right: 0;
+        width: 90%;
+        margin-top: 50px;
+    }
+
+    .title-reverse{
+        position: absolute;
+        left: 180px;
+        top: 10px;
+        width: 500px;
+    }
+
+    .title-reverse > h2{
+        font-size: 50px;
+        color: #187FC4;
+        position: absolute;
+        text-shadow: 2px  2px 1px #ffffff,-2px  2px 1px #ffffff,2px -2px 1px #ffffff,-2px -2px 1px #ffffff,
+        2px  0px 1px #ffffff,0px  2px 1px #ffffff,-2px  0px 1px #ffffff,0px -2px 1px #ffffff;
+
+    }
+    .title-reverse > h2::first-letter{
+        font-size: 70px;
+    }
+
+    .intro{
+        padding-top: 350px;
+        width: 95%;
+    }
+
+    .section{
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        margin: 160px auto 0 auto;
+    }
+
+    .section > div{
+        margin-right: 60px;
+    }
+
+    .section > div > p{
+        line-height: 2;
+    }
+
+    .section > div > img{
+        border-radius: 20px;
+    }
+
+    .waypoint{
+        margin-top: 160px;
+    }
+
+    .waypoint-info{
+        margin: 0 auto;
+        max-width: 850px;
+    }
+
+    .side-by-side{
+        margin-top: 160px;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+        width: 100%;
+    }
+
+    .side-by-side > div > img{
+        width: 330px;
+        height: 380px;
+        object-fit: cover;
+        border-radius: 20px;
+    }
+
+    .position-map{
+        margin: 160px auto 80px auto;
+        text-align: center;
+
+    }
+
+    .position-map > img{
+        border-radius: 20px;
+        width: 90%;
+    }
 }
 
-.img-reverse{
-    transform: scale(-1, 1);
-    position: absolute;
-    right: 0;
-    margin-top: 50px;
-}
+/* =========
+ タブレット用
+ ==========*/
+ @media screen and (min-width:700px) and (max-width:876px){
 
-.title-reverse{
-    position: absolute;
-    left: 180px;
-    top: 10px;
-    width: 500px;
-}
+    /* 横幅・フォントサイズ設定 */
+    body{
+        font-size: 16px;
+        max-width: 850px;
+        min-width: 650px;
+        margin: 0 auto 0 auto;
+        background-color: #F2FEFF;
+    }
 
-.title-reverse > h2{
-    font-size: 60px;
-    color: #187FC4;
-    position: absolute;
-}
-.title-reverse > h2::first-letter{
-    font-size: 80px;
-}
+    /* タイトル（右寄せ） */
+    .index{
+        position: relative;
+    }
 
-.intro{
-    padding-top: 350px;
-}
+    .img-reverse{
+        transform: scale(-1, 1);
+        position: absolute;
+        right: 0;
+        width: 90%;
+        margin-top: 50px;
+    }
 
-.section{
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    margin: 160px auto 0 auto;
-}
+    .title-reverse{
+        position: absolute;
+        left: 130px;
+        top: 10px;
+        width: 500px;
+    }
 
-.section > div{
-    margin-right: 60px;
-}
+    .title-reverse > h2{
+        font-size: 35px;
+        color: #187FC4;
+        position: absolute;
+        text-shadow: 2px  2px 1px #ffffff,-2px  2px 1px #ffffff,2px -2px 1px #ffffff,-2px -2px 1px #ffffff,
+        2px  0px 1px #ffffff,0px  2px 1px #ffffff,-2px  0px 1px #ffffff,0px -2px 1px #ffffff;
 
-.section > div > p{
-    line-height: 2;
-}
+    }
+    .title-reverse > h2::first-letter{
+        font-size: 50px;
+    }
 
-.section > div > img{
-    border-radius: 20px;
-}
+    .intro{
+        padding-top: 350px;
+        width: 95%;
+    }
 
-.waypoint{
-    margin-top: 160px;
-}
+    .section{
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        margin: 160px auto 0 auto;
+    }
 
-.side-by-side{
-    display: flex;
-    justify-content: space-between;
-    gap: 30px;
-}
+    .section > div{
+        margin-right: 20px;
+    }
 
-.side-by-side > div > img{
-    width: 400px;
-    height: 500px;
-    object-fit: cover;
-}
+    .section > div > p{
+        line-height: 2;
+    }
 
-.position-map{
-    margin: 160px auto 80px auto;
-    text-align: center;
+    .section > div > img{
+        border-radius: 20px;
+        width: 330px;
+    }
 
-}
+    .waypoint{
+        margin-top: 160px;
+    }
 
-.position-map > img{
-    border-radius: 20px;
-}
+    .waypoint-info{
+        margin: 0 auto;
+        max-width: 850px;
+    }
 
+    .side-by-side{
+        margin-top: 160px;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+        width: 100%;
+    }
+
+    .side-by-side > div > img{
+        width: 330px;
+        height: 380px;
+        object-fit: cover;
+        border-radius: 20px;
+    }
+
+    .position-map{
+        margin: 160px auto 80px auto;
+        text-align: center;
+
+    }
+
+    .position-map > img{
+        border-radius: 20px;
+        width: 90%;
+    }
+
+ }
+
+ /* ========
+  スマホ用
+ =========*/
+ @media screen and (max-width:767px) {
+
+    /* 横幅・フォントサイズ設定 */
+    body{
+        width: 321px;
+        margin: 0 auto 0 auto;
+        font-size: 16px;
+        background-color: #F2FEFF;
+    }
+
+
+    /* タイトル（右寄せ） */
+    .index{
+        position: relative;
+    }
+
+    .img-reverse{
+        transform: scale(-1, 1);
+        position: absolute;
+        right: 0;
+        width: 270px;
+        margin-top: 50px;
+    }
+
+    .title-reverse{
+        position: absolute;
+        left: 20%;
+        top: 35px;
+        width: 321px;
+    }
+
+    .title-reverse > h2{
+        font-size: 16px;
+        color: #187FC4;
+        position: absolute;
+        text-shadow: 2px  2px 1px #ffffff,-2px  2px 1px #ffffff,2px -2px 1px #ffffff,-2px -2px 1px #ffffff,
+        2px  0px 1px #ffffff,0px  2px 1px #ffffff,-2px  0px 1px #ffffff,0px -2px 1px #ffffff;
+
+    }
+    .title-reverse > h2::first-letter{
+        font-size: 20px;
+    }
+
+    .intro{
+        margin: 0 auto;
+        padding-top: 150px;
+        width: 321px;
+    }
+
+    .section{
+        width: 321px;
+        align-items: center;
+        margin: 50px auto 0 auto;
+    }
+
+
+    .section > div > p{
+        line-height: 2;
+    }
+
+    .section > div > img{
+        border-radius: 20px;
+        width: 321px;
+    }
+
+    .waypoint{
+        margin-top: 50px;
+    }
+
+    .waypoint-info{
+        margin: 60px auto;
+        width: 321px;
+    }
+
+    .side-by-side{
+        margin-top: 50px;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+        width: 100%;
+    }
+
+    .side-by-side > div > img{
+        width: 321px;
+        height: 380px;
+        object-fit: cover;
+        border-radius: 20px;
+    }
+
+    .position-map{
+        margin: 60px auto 30px auto;
+        text-align: center;
+        width: 321px;
+    }
+
+    .position-map > img{
+        border-radius: 20px;
+        width: 100%;
+    }
+
+ }
